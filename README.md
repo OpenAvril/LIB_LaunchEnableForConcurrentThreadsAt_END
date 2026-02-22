@@ -1,6 +1,7 @@
-# Avril - LIBRARY Template for Write Enable For Threads At Stack.
-## Request, Wait, Launch Next Free Concurrent Thread, Dynamic Link Library.
-## Similar Rewritten Repository.
+# OpenAvrilLIB
+## .DLL Library Template - Request, Wait, Launch Next Free Concurrent Thread.
+
+### Similar Rewritten Repository.
  - https://github.com/cameron314/concurrentqueue
    
 ### Using C++
