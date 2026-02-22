@@ -1,6 +1,6 @@
 # Avril - LIBRARY Template for Write Enable For Threads At Stack.
 ## Request, Wait, Launch Next Free Concurrent Thread, Dynamic Link Library.
-## Similar Repository
+## Similar Rewritten Repository.
  - https://github.com/cameron314/concurrentqueue
    
 ### Using C++
