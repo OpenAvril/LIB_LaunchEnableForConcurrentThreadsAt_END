@@ -3,29 +3,35 @@
 // classes.
 
 // registers.
-    int8_t _concurrentCycle_Try_CoreId_Index = NULL;
+    uint8_t _concurrentCycle_Try_CoreId_Index = NULL;
     bool _flag_praisinglaunch = NULL;
     std::list<uint32_t> _list_Of_launchActive_Count_For_ThreadID = { NULL };
     std::list<uint32_t> _list_Of_launchIdle_Count_For_ThreadID = { NULL };
     std::list<bool> _list_Of_STATE_For_ConcurrentCore = { NULL };
-    int8_t _new_concurrentCycle_Try_CoreId_Index = NULL;
-    std::list<int8_t> _list_for_Que_Of_CoreTolaunch = { NULL };
+    uint8_t _new_concurrentCycle_Try_CoreId_Index = NULL;
+    std::list<uint8_t> _list_for_Que_Of_CoreTolaunch = { NULL };
 
 // pointers.
     std::list<uint32_t>* _ptr_list_Of_launchActive_Count_For_ThreadID = NULL;
     std::list<uint32_t>* _ptr_list_Of_launchIdle_Count_For_ThreadID = NULL;
     std::list<bool>* _ptr_list_Of_STATE_For_ConcurrentCore = NULL;
-    std::list<int8_t>* _ptr_list_for_Que_Of_CoreTolaunch = NULL;
+    std::list<uint8_t>* _ptr_list_for_Que_Of_CoreTolaunch = NULL;
 
 // constructor.
     OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::launchEnableForConcurrentThreadsAt_END_Control()
     {
-        create_flag_praisinglaunch();
-        create_list_Of_launchActive_Count_For_ThreadID();
-        create_list_Of_launchIdle_Count_For_ThreadID();
+        bool* newDEFAULT_Flagbit1 = new bool(false);
+        create_flag_praisinglaunch(newDEFAULT_Flagbit1);
+        delete newDEFAULT_Flagbit1;
+        uint32_t* newDEFAULT_uint32_t = new uint32_t(UINT32_MAX);
+        create_list_Of_launchActive_Count_For_ThreadID(newDEFAULT_uint32_t);
+        create_list_Of_launchIdle_Count_For_ThreadID(newDEFAULT_uint32_t);
+        delete newDEFAULT_uint32_t;
         create_list_for_Que_Of_CoreTolaunch();
-        create_concurrentCycle_Try_CoreId_Index();
-        create_new_concurrentCycle_Try_CoreId_Index();
+        uint8_t* newDEFAULT_int8_t = new uint8_t(INT8_MAX);
+        create_concurrentCycle_Try_CoreId_Index(newDEFAULT_int8_t);
+        create_new_concurrentCycle_Try_CoreId_Index(newDEFAULT_int8_t);
+        delete newDEFAULT_int8_t;
     }
 
 // destructor.
@@ -40,94 +46,108 @@
 // public.
     void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::initialise(OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Framework* obj)
     {
-        create_list_Of_STATE_For_ConcurrentCore(obj->get_ptr_launchConcurrency()->get_ptr_Global());
+        bool* newINITIALISED_Flagbit1 = new bool(false);
+        initialise_flag_praisinglaunch(newINITIALISED_Flagbit1);
+        delete newINITIALISED_Flagbit1;
+        uint32_t* newINITIALISED_uint32_t = new uint32_t(UINT32_MAX);
+        for (uint8_t concurrenctThreadID = 0; concurrenctThreadID < get_Length_Of_list_Of_launchActive_Count_For_ThreadID(); concurrenctThreadID++)
+        {
+            initialise_Item_On_list_Of_launchActive_Count_For_ThreadID(concurrenctThreadID, newINITIALISED_uint32_t);
+            initialise_Item_On_list_Of_launchIdle_Count_For_ThreadID(concurrenctThreadID, newINITIALISED_uint32_t);
+        }
+        delete newINITIALISED_uint32_t;
+        initialise_list_for_Que_Of_CoreTolaunch();
+        uint8_t* newINITIALISED_int8_t = new uint8_t(UINT8_MAX);
+        initialise_concurrentCycle_Try_CoreId_Index(newINITIALISED_int8_t);
+        initialise_new_concurrentCycle_Try_CoreId_Index(newINITIALISED_int8_t);
+        delete newINITIALISED_int8_t;
     }
     void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::launchEnable_Activate(OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Framework* obj)
     {
-        obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->set_Item_On_list_Of_STATE_For_ConcurrentCore(obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_Of_STATE_For_ConcurrentCore(0), obj->get_ptr_launchConcurrency()->get_ptr_Global()->get_flag_core_ACTIVE());
+        obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->set_Item_On_list_Of_STATE_For_ConcurrentCore(obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_Of_STATE_For_ConcurrentCore(0), obj->get_ptr_LaunchConcurrency()->get_ptr_Global()->get_flag_core_ACTIVE());
     }
-    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::launchEnable_Request(OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Framework* obj, int8_t concurrent_CoreId)
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::launchEnable_Request(OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t concurrent_CoreId)
     {
-        while (obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_Of_STATE_For_ConcurrentCore(get_Item_On_list_for_Que_Of_CoreTolaunch(0)) != obj->get_ptr_launchConcurrency()->get_ptr_Global()->get_flag_core_IDLE())
+        while (obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_Of_STATE_For_ConcurrentCore(get_Item_On_list_for_Que_Of_CoreTolaunch(0)) != obj->get_ptr_LaunchConcurrency()->get_ptr_Global()->get_flag_core_IDLE())
         {
 
         }
-        while (obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_flag_praisinglaunch() == true)
+        while (obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_flag_praisinglaunch() == true)
         {
-            obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->dynamicStagger(obj, concurrent_CoreId);
+            obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->dynamicStagger(obj, concurrent_CoreId);
         }
-        obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->set_flag_praisinglaunch(true);
-        obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->set_concurrentCycle_Try_CoreId_Index(get_new_concurrentCycle_Try_CoreId_Index());
-        if (obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_concurrentCycle_Try_CoreId_Index() == concurrent_CoreId)
+        obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->set_flag_praisinglaunch(true);
+        obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->set_concurrentCycle_Try_CoreId_Index(get_new_concurrentCycle_Try_CoreId_Index());
+        if (obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_concurrentCycle_Try_CoreId_Index() == concurrent_CoreId)
         {
             //exit
         }
         else
         {
-            obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->set_new_concurrentCycle_Try_CoreId_Index(get_concurrentCycle_Try_CoreId_Index() + 1);
-            if (obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_concurrentCycle_Try_CoreId_Index() == 3)//NUMBER OF CONCURRENT  THREADS
+            obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->set_new_concurrentCycle_Try_CoreId_Index(get_concurrentCycle_Try_CoreId_Index() + 1);
+            if (obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_concurrentCycle_Try_CoreId_Index() == 3)//NUMBER OF CONCURRENT  THREADS
             {
-                obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->set_new_concurrentCycle_Try_CoreId_Index(0);
+                obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->set_new_concurrentCycle_Try_CoreId_Index(0);
             }
-            obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->set_flag_praisinglaunch(false);
-            obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->launchEnable_Request(obj, concurrent_CoreId);
+            obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->set_flag_praisinglaunch(false);
+            obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->launchEnable_Request(obj, concurrent_CoreId);
         }
     }
-    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::launchEnable_SortQue(OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Framework* obj, int8_t number_Implemented_Threads)
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::launchEnable_SortQue(OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t number_Implemented_Threads)
     {
-        for (int8_t index_A = 0; index_A < number_Implemented_Threads - 2; index_A++)
+        for (uint8_t index_A = 0; index_A < number_Implemented_Threads - 2; index_A++)
         {
-            for (int8_t index_B = index_A + 1; index_B < number_Implemented_Threads - 1; index_B++)
+            for (uint8_t index_B = index_A + 1; index_B < number_Implemented_Threads - 1; index_B++)
             {
-                if (obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_Of_STATE_For_ConcurrentCore(get_Item_On_list_for_Que_Of_CoreTolaunch(index_A)) == obj->get_ptr_launchConcurrency()->get_ptr_Global()->get_flag_core_ACTIVE())
+                if (obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_Of_STATE_For_ConcurrentCore(get_Item_On_list_for_Que_Of_CoreTolaunch(index_A)) == obj->get_ptr_LaunchConcurrency()->get_ptr_Global()->get_flag_core_ACTIVE())
                 {
-                    if (obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_Of_STATE_For_ConcurrentCore(get_Item_On_list_for_Que_Of_CoreTolaunch(index_B)) == obj->get_ptr_launchConcurrency()->get_ptr_Global()->get_flag_core_IDLE())
+                    if (obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_Of_STATE_For_ConcurrentCore(get_Item_On_list_for_Que_Of_CoreTolaunch(index_B)) == obj->get_ptr_LaunchConcurrency()->get_ptr_Global()->get_flag_core_IDLE())
                     {
-                        obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->launchEnable_ShiftQueValues(obj, index_A, index_B);
+                        obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->launchEnable_ShiftQueValues(obj, index_A, index_B);
                     }
-                    else if (obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_Of_STATE_For_ConcurrentCore(obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_for_Que_Of_CoreTolaunch(index_B)) == obj->get_ptr_launchConcurrency()->get_ptr_Global()->get_flag_core_ACTIVE())
+                    else if (obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_Of_STATE_For_ConcurrentCore(obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_for_Que_Of_CoreTolaunch(index_B)) == obj->get_ptr_LaunchConcurrency()->get_ptr_Global()->get_flag_core_ACTIVE())
                     {
-                        if (obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_Of_launchActive_Count_For_ThreadID(index_A) > obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_Of_launchActive_Count_For_ThreadID(index_B))
+                        if (obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_Of_launchActive_Count_For_ThreadID(index_A) > obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_Of_launchActive_Count_For_ThreadID(index_B))
                         {
-                            obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->launchEnable_ShiftQueValues(obj, index_A, index_B);
+                            obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->launchEnable_ShiftQueValues(obj, index_A, index_B);
                         }
                     }
                 }
-                else if (obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_Of_STATE_For_ConcurrentCore(obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_for_Que_Of_CoreTolaunch(index_A)) == obj->get_ptr_launchConcurrency()->get_ptr_Global()->get_flag_core_IDLE())
+                else if (obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_Of_STATE_For_ConcurrentCore(obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_for_Que_Of_CoreTolaunch(index_A)) == obj->get_ptr_LaunchConcurrency()->get_ptr_Global()->get_flag_core_IDLE())
 
-                    if (obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_Of_STATE_For_ConcurrentCore(obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_for_Que_Of_CoreTolaunch(index_B)) == obj->get_ptr_launchConcurrency()->get_ptr_Global()->get_flag_core_IDLE())
+                    if (obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_Of_STATE_For_ConcurrentCore(obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_for_Que_Of_CoreTolaunch(index_B)) == obj->get_ptr_LaunchConcurrency()->get_ptr_Global()->get_flag_core_IDLE())
                     {
-                        if (obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_Of_launchIdle_Count_For_ThreadID(index_A) < obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_Of_launchIdle_Count_For_ThreadID(index_B))
+                        if (obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_Of_launchIdle_Count_For_ThreadID(index_A) < obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_Of_launchIdle_Count_For_ThreadID(index_B))
                         {
-                            obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->launchEnable_ShiftQueValues(obj, index_A, index_B);
+                            obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->launchEnable_ShiftQueValues(obj, index_A, index_B);
                         }
                     }
             }
         }
     }
-    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::launchQue_Update(OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Framework* obj, int8_t number_Implemented_Threads)
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::launchQue_Update(OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t number_Implemented_Threads)
     {
-        for (int8_t index = 0; index < number_Implemented_Threads; index++)
+        for (uint8_t index = 0; index < number_Implemented_Threads; index++)
         {
-            switch (obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_Of_STATE_For_ConcurrentCore(index))
+            switch (obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_Of_STATE_For_ConcurrentCore(index))
             {
             case false:
             {
-                obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->set_Item_On_list_Of_launchActive_Count_For_ThreadID(index, 0);
-                obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->set_Item_On_list_Of_launchIdle_Count_For_ThreadID(index, obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_Of_launchActive_Count_For_ThreadID(index) + 1);
+                obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->set_Item_On_list_Of_launchActive_Count_For_ThreadID(index, 0);
+                obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->set_Item_On_list_Of_launchIdle_Count_For_ThreadID(index, obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_Of_launchActive_Count_For_ThreadID(index) + 1);
                 break;
             }
             case true:
             {
-                obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->set_Item_On_list_Of_launchActive_Count_For_ThreadID(index, obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_Of_launchIdle_Count_For_ThreadID(index) + 1);
-                obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->set_Item_On_list_Of_launchIdle_Count_For_ThreadID(index, 0);
+                obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->set_Item_On_list_Of_launchActive_Count_For_ThreadID(index, obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_Of_launchIdle_Count_For_ThreadID(index) + 1);
+                obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->set_Item_On_list_Of_launchIdle_Count_For_ThreadID(index, 0);
                 break;
             }
             }
         }
     }
     // get.
-    int8_t OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::get_concurrentCycle_Try_CoreId_Index()
+    uint8_t OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::get_concurrentCycle_Try_CoreId_Index()
     {
         return _concurrentCycle_Try_CoreId_Index;
     }
@@ -135,31 +155,31 @@
     {
         return _flag_praisinglaunch;
     }
-    uint32_t OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::get_Item_On_list_Of_launchActive_Count_For_ThreadID(int8_t threadID)
+    uint32_t OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::get_Item_On_list_Of_launchActive_Count_For_ThreadID(uint8_t threadID)
     {
         auto temp = get_ptr_list_Of_launchActive_Count_For_ThreadID()->begin();
         std::advance(temp, threadID);
         return *temp;
     }
-    uint32_t OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::get_Item_On_list_Of_launchIdle_Count_For_ThreadID(int8_t threadID)
+    uint32_t OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::get_Item_On_list_Of_launchIdle_Count_For_ThreadID(uint8_t threadID)
     {
         auto temp = get_ptr_list_Of_launchIdle_Count_For_ThreadID()->begin();
         std::advance(temp, threadID);
         return *temp;
     }
-    bool OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::get_Item_On_list_Of_STATE_For_ConcurrentCore(int8_t concurrenct_threadID)
+    bool OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::get_Item_On_list_Of_STATE_For_ConcurrentCore(uint8_t concurrenct_threadID)
     {
         auto temp = get_ptr_list_Of_STATE_For_ConcurrentCore()->begin();
         std::advance(temp, concurrenct_threadID);
         return *temp;
     }
-    int8_t OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::get_Item_On_list_for_Que_Of_CoreTolaunch(int8_t concurrenct_threadID)
+    uint8_t OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::get_Item_On_list_for_Que_Of_CoreTolaunch(uint8_t concurrenct_threadID)
     {
         auto temp = get_ptr_list_for_Que_Of_CoreTolaunch()->begin();
         std::advance(temp, concurrenct_threadID);
         return *temp;
     }
-    int8_t OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::get_new_concurrentCycle_Try_CoreId_Index()
+    uint8_t OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::get_new_concurrentCycle_Try_CoreId_Index()
     {
         return _new_concurrentCycle_Try_CoreId_Index;
     }
@@ -175,12 +195,12 @@
     {
         return _ptr_list_Of_STATE_For_ConcurrentCore;
     }
-    std::list<int8_t>* OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::get_ptr_list_for_Que_Of_CoreTolaunch()
+    std::list<uint8_t>* OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::get_ptr_list_for_Que_Of_CoreTolaunch()
     {
         return _ptr_list_for_Que_Of_CoreTolaunch;
     }
     // set.
-    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::set_concurrentCycle_Try_CoreId_Index(int8_t newValue)
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::set_concurrentCycle_Try_CoreId_Index(uint8_t newValue)
     {
         _concurrentCycle_Try_CoreId_Index = newValue;
     }
@@ -188,25 +208,25 @@
     {
         _flag_praisinglaunch = newFlag;
     }
-    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::set_Item_On_list_Of_launchActive_Count_For_ThreadID(int8_t threadID, uint32_t newValue)
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::set_Item_On_list_Of_launchActive_Count_For_ThreadID(uint8_t concurrenctThreadID, uint32_t newValue)
     {
         auto temp = get_ptr_list_Of_launchActive_Count_For_ThreadID()->begin();
-        std::advance(temp, threadID);
-        *temp = threadID;
+        std::advance(temp, concurrenctThreadID);
+        *temp = newValue;
     }
-    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::set_Item_On_list_Of_launchIdle_Count_For_ThreadID(int8_t threadID, uint32_t newValue)
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::set_Item_On_list_Of_launchIdle_Count_For_ThreadID(uint8_t concurrenctThreadID, uint32_t newValue)
     {
         auto temp = get_ptr_list_Of_launchIdle_Count_For_ThreadID()->begin();
-        std::advance(temp, threadID);
-        *temp = threadID;
+        std::advance(temp, concurrenctThreadID);
+        *temp = newValue;
     }
-    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::set_Item_On_list_Of_STATE_For_ConcurrentCore(int8_t concurrenct_threadID, bool newState)
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::set_Item_On_list_Of_STATE_For_ConcurrentCore(uint8_t concurrenct_threadID, bool newState)
     {
         auto temp = get_ptr_list_Of_STATE_For_ConcurrentCore()->begin();
         std::advance(temp, concurrenct_threadID);
         *temp = newState;
     }
-    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::set_Item_On_list_for_Que_Of_CoreTolaunch(int8_t slot, int8_t concurrenct_threadID)
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::set_Item_On_list_for_Que_Of_CoreTolaunch(uint8_t slot, uint8_t concurrenct_threadID)
     {
         auto temp = get_ptr_list_for_Que_Of_CoreTolaunch()->begin();
         std::advance(temp, slot);
@@ -218,37 +238,37 @@
     }
 
 // private.
-    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::create_concurrentCycle_Try_CoreId_Index()
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::create_concurrentCycle_Try_CoreId_Index(uint8_t* newDEFAULT_Value)
     {
-        set_concurrentCycle_Try_CoreId_Index(int8_t(255));
+        set_concurrentCycle_Try_CoreId_Index(*newDEFAULT_Value);
     }
-    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::create_flag_praisinglaunch()
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::create_flag_praisinglaunch(bool* newDEFAULT_Flagbit)
     {
-        set_flag_praisinglaunch(false);
+        set_flag_praisinglaunch(*newDEFAULT_Flagbit);
     }
-    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::create_list_Of_launchActive_Count_For_ThreadID()
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::create_list_Of_launchActive_Count_For_ThreadID(uint32_t* newDEFAULT_Value)
     {
-        std::list<uint32_t> _list_Of_launchActive_Count_For_ThreadID = { uint32_t(0), uint32_t(0), uint32_t(0), uint32_t(0) };//NUMBER OF THREADS
+        std::list<uint32_t> _list_Of_launchActive_Count_For_ThreadID = { *newDEFAULT_Value, *newDEFAULT_Value, *newDEFAULT_Value, *newDEFAULT_Value };//NUMBER OF THREADS
         create_ptr_list_Of_launchActive_Count_For_ThreadID();
     }
-    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::create_list_Of_launchIdle_Count_For_ThreadID()
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::create_list_Of_launchIdle_Count_For_ThreadID(uint32_t* newDEFAULT_Value)
     {
-        std::list<uint32_t> _list_Of_launchIdle_Count_For_ThreadID = { uint32_t(0), uint32_t(0), uint32_t(0), uint32_t(0) };//NUMBER OF THREADS
+        std::list<uint32_t> _list_Of_launchIdle_Count_For_ThreadID = { *newDEFAULT_Value, *newDEFAULT_Value, *newDEFAULT_Value, *newDEFAULT_Value };//NUMBER OF THREADS
         create_ptr_list_Of_launchIdle_Count_For_ThreadID();
 
     }
-    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::create_list_Of_STATE_For_ConcurrentCore(OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Global* ptr_global)
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::create_list_Of_STATE_For_ConcurrentCore(bool* newDEFAULT_FlagBit)
     {
-        std::list<bool> _list_Of_STATE_For_ConcurrentCore = { ptr_global->get_flag_core_IDLE(), ptr_global->get_flag_core_IDLE(), ptr_global->get_flag_core_IDLE() };//NUMBER OF CONCURRENT THREADS
+        std::list<bool> _list_Of_STATE_For_ConcurrentCore = { *newDEFAULT_FlagBit, *newDEFAULT_FlagBit, *newDEFAULT_FlagBit };//NUMBER OF CONCURRENT THREADS
         create_ptr_list_Of_STATE_For_ConcurrentCore();
     }
-    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::create_new_concurrentCycle_Try_CoreId_Index()
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::create_new_concurrentCycle_Try_CoreId_Index(uint8_t* newDEFAULT_Value)
     {
-        set_new_concurrentCycle_Try_CoreId_Index(int8_t(255));
+        set_new_concurrentCycle_Try_CoreId_Index(*newDEFAULT_Value);
     }
     void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::create_list_for_Que_Of_CoreTolaunch()
     {
-        std::list<int8_t> _list_for_Que_Of_CoreTolaunch = { int8_t(0), int8_t(1), int8_t(2), int8_t(3) };//NUMBER OF THREADS
+        std::list<uint8_t> _list_for_Que_Of_CoreTolaunch = { uint8_t(INT8_MAX), uint8_t(INT8_MAX), uint8_t(INT8_MAX), uint8_t(INT8_MAX) };//NUMBER OF THREADS
         create_ptr_list_for_Que_Of_CoreTolaunch();
     }
     void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::create_ptr_list_Of_launchActive_Count_For_ThreadID()
@@ -267,9 +287,9 @@
     {
         set_ptr_list_for_Que_Of_CoreTolaunch(&_list_for_Que_Of_CoreTolaunch);
     }
-    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::dynamicStagger(OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Framework* obj, int8_t concurrent_CoreId)
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::dynamicStagger(OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t concurrent_CoreId)
     {
-        if (obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_concurrentCycle_Try_CoreId_Index() == concurrent_CoreId)
+        if (obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_concurrentCycle_Try_CoreId_Index() == concurrent_CoreId)
         {
             //exit early
         }
@@ -283,21 +303,58 @@
             }
         }
     }
-    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::launchEnable_ShiftQueValues(OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Framework* obj, int8_t concurrent_CoreId_A, int8_t concurrent_CoreId_B)
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::initialise_concurrentCycle_Try_CoreId_Index(uint8_t* newINITIALISED_Value)
+    {
+        set_concurrentCycle_Try_CoreId_Index(*newINITIALISED_Value);
+    }
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::initialise_flag_praisinglaunch(bool* newINITIALISED_Flagbit)
+    {
+        set_flag_praisinglaunch(*newINITIALISED_Flagbit);
+    }
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::initialise_Item_On_list_Of_launchActive_Count_For_ThreadID(uint8_t concurrenctThreadID, uint32_t* newINITIALISED_Value)
+    {
+
+        auto temp = get_ptr_list_Of_launchActive_Count_For_ThreadID()->begin();
+        std::advance(temp, concurrenctThreadID);
+        *temp = *newINITIALISED_Value;
+    }
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::initialise_Item_On_list_Of_launchIdle_Count_For_ThreadID(uint8_t concurrenctThreadID, uint32_t* newINITIALISED_Value)
+    {
+        auto temp = get_ptr_list_Of_launchIdle_Count_For_ThreadID()->begin();
+        std::advance(temp, concurrenctThreadID);
+        *temp = *newINITIALISED_Value;
+    }
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::initialise_Item_On_list_Of_STATE_For_ConcurrentCore(uint8_t concurrenct_threadID, launchEnableForConcurrentThreadsAt_END_Global* ptr_Global)
+    {
+        set_Item_On_list_Of_STATE_For_ConcurrentCore(concurrenct_threadID, ptr_Global->get_flag_core_IDLE());
+    }
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::initialise_new_concurrentCycle_Try_CoreId_Index(uint8_t* newINITIALISED_Value)
+    {
+        set_new_concurrentCycle_Try_CoreId_Index(*newINITIALISED_Value);
+    }
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::initialise_list_for_Que_Of_CoreTolaunch()
+    {
+        std::list<uint8_t> _list_for_Que_Of_CoreTolaunch = { uint8_t(0), uint8_t(1), uint8_t(2), uint8_t(3) };//NUMBER OF THREADS
+    }
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::launchEnable_ShiftQueValues(OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t concurrent_CoreId_A, uint8_t concurrent_CoreId_B)
     {
         int temp_Int;
-        temp_Int = obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_Of_launchActive_Count_For_ThreadID(concurrent_CoreId_A);
-        obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->set_Item_On_list_Of_launchActive_Count_For_ThreadID(concurrent_CoreId_A, obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_Of_launchActive_Count_For_ThreadID(concurrent_CoreId_B));
-        obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->set_Item_On_list_Of_launchActive_Count_For_ThreadID(concurrent_CoreId_B, temp_Int);
+        temp_Int = obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_Of_launchActive_Count_For_ThreadID(concurrent_CoreId_A);
+        obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->set_Item_On_list_Of_launchActive_Count_For_ThreadID(concurrent_CoreId_A, obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_Of_launchActive_Count_For_ThreadID(concurrent_CoreId_B));
+        obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->set_Item_On_list_Of_launchActive_Count_For_ThreadID(concurrent_CoreId_B, temp_Int);
 
-        temp_Int = obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_Of_launchIdle_Count_For_ThreadID(concurrent_CoreId_A);
-        obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->set_Item_On_list_Of_launchIdle_Count_For_ThreadID(concurrent_CoreId_A, obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_Of_launchIdle_Count_For_ThreadID(concurrent_CoreId_B));
-        obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->set_Item_On_list_Of_launchIdle_Count_For_ThreadID(concurrent_CoreId_B, temp_Int);
+        temp_Int = obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_Of_launchIdle_Count_For_ThreadID(concurrent_CoreId_A);
+        obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->set_Item_On_list_Of_launchIdle_Count_For_ThreadID(concurrent_CoreId_A, obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_Of_launchIdle_Count_For_ThreadID(concurrent_CoreId_B));
+        obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->set_Item_On_list_Of_launchIdle_Count_For_ThreadID(concurrent_CoreId_B, temp_Int);
 
-        int8_t temp_UnnsignedChar;
-        temp_UnnsignedChar = obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_for_Que_Of_CoreTolaunch(concurrent_CoreId_A);
-        obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->set_Item_On_list_for_Que_Of_CoreTolaunch(concurrent_CoreId_A, obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->get_Item_On_list_for_Que_Of_CoreTolaunch(concurrent_CoreId_B));
-        obj->get_ptr_launchConcurrency()->get_ptr_launchConcurrency_Control()->set_Item_On_list_for_Que_Of_CoreTolaunch(concurrent_CoreId_B, temp_UnnsignedChar);
+        uint8_t temp_UnnsignedChar;
+        temp_UnnsignedChar = obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_for_Que_Of_CoreTolaunch(concurrent_CoreId_A);
+        obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->set_Item_On_list_for_Que_Of_CoreTolaunch(concurrent_CoreId_A, obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_for_Que_Of_CoreTolaunch(concurrent_CoreId_B));
+        obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->set_Item_On_list_for_Que_Of_CoreTolaunch(concurrent_CoreId_B, temp_UnnsignedChar);
+    }
+    uint8_t OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::get_Length_Of_list_Of_launchActive_Count_For_ThreadID()
+    {
+        return sizeof(_list_Of_launchActive_Count_For_ThreadID);
     }
     // get.
     // set.
@@ -313,7 +370,7 @@
     {
         _ptr_list_Of_STATE_For_ConcurrentCore = newPtr;
     }
-    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::set_ptr_list_for_Que_Of_CoreTolaunch(std::list<int8_t>* newPtr)
+    void OpenAvrilLIB::launchEnableForConcurrentThreadsAt_END_Control::set_ptr_list_for_Que_Of_CoreTolaunch(std::list<uint8_t>* newPtr)
     {
         _ptr_list_for_Que_Of_CoreTolaunch = newPtr;
     }

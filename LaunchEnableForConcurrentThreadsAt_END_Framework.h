@@ -20,31 +20,14 @@ namespace OpenAvrilLIB
 // public.
         void initialise(class launchEnableForConcurrentThreadsAt_END_Framework* obj);
     // get.
-        class launchEnableForConcurrentThreadsAt_END* get_ptr_launchConcurrency();
+        class launchEnableForConcurrentThreadsAt_END* get_ptr_LaunchConcurrency();
     // set.
 
     private:
 // private.
-        void create_ptr_launchConcurrency();
+        void create_ptr_LaunchConcurrency();
     // get.
     // set.
-        void set_ptr_launchConcurrency(class launchEnableForConcurrentThreadsAt_END* concurrentQue);
+        void set_ptr_LaunchConcurrency(class launchEnableForConcurrentThreadsAt_END* concurrentQue);
     };
 }
-// classes.
-
-// registers.
-
-// pointers.
-
-// constructor.
-
-// destructor.
-
-// public.
-    // get.
-    // set.
-
-// private.
-    // get.
-    // set.
