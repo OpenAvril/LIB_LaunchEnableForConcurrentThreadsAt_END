@@ -2,7 +2,7 @@
 
 namespace OpenAvrilLIB
 {
-    class launchEnableForConcurrentThreadsAt_END_Framework
+    class LaunchEnableForConcurrentThreadsAt_END_Framework
     {
 // classes.
 
@@ -12,22 +12,33 @@ namespace OpenAvrilLIB
 
     public:
 // constructor.
-        launchEnableForConcurrentThreadsAt_END_Framework();
+        LaunchEnableForConcurrentThreadsAt_END_Framework();
 
 // destructor.
-        virtual ~launchEnableForConcurrentThreadsAt_END_Framework();
+        virtual ~LaunchEnableForConcurrentThreadsAt_END_Framework();
 
 // public.
-        void initialise(class launchEnableForConcurrentThreadsAt_END_Framework* obj);
-    // get.
-        class launchEnableForConcurrentThreadsAt_END* get_ptr_LaunchConcurrency();
-    // set.
+    // dynamic.
+        void initialise(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj);
+        // get.
+        class LaunchEnableForConcurrentThreadsAt_END* get_ptr_LaunchConcurrency();
+        // set.
+    // static.
+        // get.
+        // set.
 
     private:
 // private.
-        void create_ptr_LaunchConcurrency();
-    // get.
-    // set.
-        void set_ptr_LaunchConcurrency(class launchEnableForConcurrentThreadsAt_END* concurrentQue);
+    // dynaminc.
+        // get.
+        // set.
+        void set_ptr_LaunchConcurrency(class LaunchEnableForConcurrentThreadsAt_END* concurrentQue);
+
+    // static.
+        static void create_ptr_LaunchConcurrency();
+        // get.
+        static class LaunchEnableForConcurrentThreadsAt_END* Get_ptr_LaunchConcurrency();
+        // set.
+        static void Set_ptr_LaunchConcurrency(class LaunchEnableForConcurrentThreadsAt_END* concurrentQue);
     };
 }

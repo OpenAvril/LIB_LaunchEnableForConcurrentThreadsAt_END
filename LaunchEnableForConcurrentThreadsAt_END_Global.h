@@ -2,7 +2,7 @@
 
 namespace OpenAvrilLIB
 {
-    class launchEnableForConcurrentThreadsAt_END_Global
+    class LaunchEnableForConcurrentThreadsAt_END_Global
     {
 // classes.
 
@@ -12,31 +12,42 @@ namespace OpenAvrilLIB
 
     public:
 // constructor.
-        launchEnableForConcurrentThreadsAt_END_Global();
+        LaunchEnableForConcurrentThreadsAt_END_Global();
 
 // destructor.
-        ~launchEnableForConcurrentThreadsAt_END_Global();
+        ~LaunchEnableForConcurrentThreadsAt_END_Global();
 
 // public.
+    // dynamic.
         void initialise_flag_core_ACTIVE(bool* newINISIALISED_Flag);
         void initialise_flag_core_IDLE(bool* newINISIALISED_Flag);
         void initialise_number_Implemented_Threads(uint8_t* newINISIALISED_Value);
-    // get.
+        // get.
         bool get_flag_core_ACTIVE();
         bool get_flag_core_IDLE();
         uint8_t get_number_Implemented_Threads();
-    // set.
+        // set.
+    // static.
+        // get.
+        // set.
 
     private:
 // private.
-        void create_flag_core_ACTIVE(bool* newDEFAULT_Flag);
-        void create_flag_core_IDLE(bool* newDEFAULT_Flag);
-        void create_number_Implemented_Threads(uint8_t* newDEFAULT_Value);
+    // dynamic.
+        // get.
+        // set.
+    // static.
+        static void create_flag_core_ACTIVE(bool* newDEFAULT_Flag);
+        static void create_flag_core_IDLE(bool* newDEFAULT_Flag);
+        static void create_number_Implemented_Threads(uint8_t* newDEFAULT_Value);
+        // get.
+        static bool Get_flag_core_ACTIVE();
+        static bool Get_flag_core_IDLE();
+        uint8_t Get_number_Implemented_Threads();
+        // set.
+        static void set_flag_core_ACTIVE(bool value);
+        static void set_flag_core_IDLE(bool value);
+        static void set_number_Implemented_Threads(uint8_t coreId);
 
-    // get.
-    // set.
-        void set_flag_core_ACTIVE(bool value);
-        void set_flag_core_IDLE(bool value);
-        void set_number_Implemented_Threads(uint8_t coreId);
     };
 }
