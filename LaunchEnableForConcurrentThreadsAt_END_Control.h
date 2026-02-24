@@ -8,7 +8,7 @@ namespace OpenAvrilLIB
 
 // registers.
 
-// pointers.
+// pointer.
 
     public:
 // constructor.
@@ -18,6 +18,7 @@ namespace OpenAvrilLIB
         virtual ~LaunchEnableForConcurrentThreadsAt_END_Control();
 
 // public.
+    // dynamic.
         void initialise_concurrentCycle_Try_CoreId_Index(uint8_t* newINITIALISED_Value);
         void initialise_flag_praisinglaunch(bool* newINITIALISED_Flagbit);
         void initialise_Item_On_list_Of_launchActive_Count_For_ThreadID(uint8_t concurrenctThreadID, uint32_t* newINITIALISED_Value);
@@ -29,7 +30,7 @@ namespace OpenAvrilLIB
         void launchEnable_Request(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t concurrent_CoreId);
         void launchEnable_SortQue(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t number_Implemented_Threads);
         void launchQue_Update(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t number_Implemented_Threads);
-    // get.
+        // get.
         uint8_t get_concurrentCycle_Try_CoreId_Index();
         bool get_flag_praisinglaunch();
         uint32_t get_Item_On_list_Of_launchActive_Count_For_ThreadID(uint8_t threadID);
@@ -41,7 +42,7 @@ namespace OpenAvrilLIB
         std::list<uint32_t>* get_ptr_list_Of_launchIdle_Count_For_ThreadID();
         std::list<bool>* get_ptr_list_Of_STATE_For_ConcurrentCore();
         std::list<uint8_t>* get_ptr_list_for_Que_Of_CoreTolaunch();
-    // set.
+        // set.
         void set_concurrentCycle_Try_CoreId_Index(uint8_t newValue);
         void set_flag_praisinglaunch(bool newFlag);
         void set_Item_On_list_Of_launchActive_Count_For_ThreadID(uint8_t concurrenctThreadID, uint32_t newValue);
@@ -49,6 +50,9 @@ namespace OpenAvrilLIB
         void set_Item_On_list_Of_STATE_For_ConcurrentCore(uint8_t concurrenct_threadID, bool newState);
         void set_Item_On_list_for_Que_Of_CoreTolaunch(uint8_t slot, uint8_t concurrenct_threadID);
         void set_new_concurrentCycle_Try_CoreId_Index(uint32_t newValue);
+    // static.
+        // get.
+        // set.
 
     private:
 // private.

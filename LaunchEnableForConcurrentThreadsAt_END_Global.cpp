@@ -6,7 +6,8 @@
     bool _flag_core_ACTIVE = NULL;
     bool _flag_core_IDLE = NULL;
     uint8_t _number_Implemented_Threads = NULL;
-// pointers.
+
+// pointer.
     bool* _ptr_flag_core_ACTIVE = NULL;
     bool* _ptr_flag_core_IDLE = NULL;
     uint8_t* _ptr_number_Implemented_Threads = NULL;

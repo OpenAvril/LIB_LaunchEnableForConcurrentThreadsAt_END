@@ -1,12 +1,11 @@
 #include "pch.h"
-
 // classes.
     OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END_Global* _ptr_Global = NULL;
     OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END_Control* _ptr_LaunchConcurrency_Control = NULL;
 
 // registers.
 
-// pointers.
+// pointer.
 
 // constructor.
     OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END::LaunchEnableForConcurrentThreadsAt_END()
@@ -22,10 +21,10 @@
     }
 
 // public.
-    // dynamin.
-    void OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END::initialise_Control()
+    // dynamic.
+    void OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END::initialise_Control(OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END_Framework* obj)
     {
-        create_ptr_LaunchConcurrency_Control();
+        obj->get_ptr_LaunchConcurrency()->create_ptr_LaunchConcurrency_Control(obj);
     }
     void OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END::thread_Start(OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t concurrent_CoreId)
     {
@@ -74,37 +73,33 @@
     // static.
         // get.
         // set.
-   
+
 // private.
     // dynamic.
-         // get.
+    void OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END::create_ptr_LaunchConcurrency_Control(OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END_Framework* obj)
+    {
+        set_ptr_LaunchConcurrency_Control(new class OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END_Control());
+        while (obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control() == NULL) {}
+    }
+        // get.
         // set.
     // static.
     void OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END::create_ptr_Global()
     {
-        Set_ptr_Global(new class OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END_Global());
+        set_ptr_Global(new class OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END_Global());
         while (Get_ptr_Global() == NULL) {}
-    }
-    void OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END::create_ptr_LaunchConcurrency_Control()
-    {
-        Set_ptr_LaunchConcurrency_Control(new class OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END_Control());
-        while (Get_ptr_LaunchConcurrency_Control() == NULL) {}
     }
         // get.
     OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END_Global* OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END::Get_ptr_Global()
     {
         return _ptr_Global;
     }
-    OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END_Control* OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END::Get_ptr_LaunchConcurrency_Control()
-    {
-        return _ptr_LaunchConcurrency_Control;
-    }
         // set.
-    void OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END::Set_ptr_Global(LaunchEnableForConcurrentThreadsAt_END_Global* newClass)
+    void OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END::set_ptr_Global(LaunchEnableForConcurrentThreadsAt_END_Global* newClass)
     {
         _ptr_Global = newClass;
     }
-    void OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END::Set_ptr_LaunchConcurrency_Control(LaunchEnableForConcurrentThreadsAt_END_Control* newClass)
+    void OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END::set_ptr_LaunchConcurrency_Control(LaunchEnableForConcurrentThreadsAt_END_Control* newClass)
     {
         _ptr_LaunchConcurrency_Control = newClass;
     }

@@ -31,7 +31,7 @@
 		*newINISIALISED_Flag = false;
 		obj->get_ptr_LaunchConcurrency()->get_ptr_Global()->initialise_flag_core_IDLE(newINISIALISED_Flag);
 		delete newINISIALISED_Flag;
-		obj->get_ptr_LaunchConcurrency()->initialise_Control();
+		obj->get_ptr_LaunchConcurrency()->initialise_Control(obj);
 		bool* newINITIALISED_Flagbit1 = new bool(false);
 		obj->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->initialise_flag_praisinglaunch(newINITIALISED_Flagbit1);
 		delete newINITIALISED_Flagbit1;

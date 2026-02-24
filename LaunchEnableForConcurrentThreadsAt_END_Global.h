@@ -8,7 +8,7 @@ namespace OpenAvrilLIB
 
 // registers.
 
-// pointers.
+// pointer.
 
     public:
 // constructor.
@@ -48,6 +48,5 @@ namespace OpenAvrilLIB
         static void set_flag_core_ACTIVE(bool value);
         static void set_flag_core_IDLE(bool value);
         static void set_number_Implemented_Threads(uint8_t coreId);
-
     };
 }
