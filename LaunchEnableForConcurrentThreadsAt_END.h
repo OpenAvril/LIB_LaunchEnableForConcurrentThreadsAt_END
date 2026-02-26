@@ -1,6 +1,6 @@
 #pragma once
 
-namespace OpenAvrilLIB
+namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND
 {
     class LaunchEnableForConcurrentThreadsAt_END
     {

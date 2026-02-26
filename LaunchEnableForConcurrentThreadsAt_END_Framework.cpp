@@ -2,24 +2,24 @@
 
 // pointers.
 	// classes.
-	OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END* OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END_Framework::_ptr_LaunchConcurrency = NULL;
+	OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework::_ptr_LaunchConcurrency = NULL;
 	// registers.
 
 // constructor.
-	OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END_Framework::LaunchEnableForConcurrentThreadsAt_END_Framework()
+	OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework::LaunchEnableForConcurrentThreadsAt_END_Framework()
 	{
 		create_ptr_LaunchConcurrency();
 	}
 
 // destructor.
-	OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END_Framework::~LaunchEnableForConcurrentThreadsAt_END_Framework()
+	OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework::~LaunchEnableForConcurrentThreadsAt_END_Framework()
 	{
 
 	}
 
 // public.
 	// dynamic.
-	void OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END_Framework::initialise(OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END_Framework* obj)
+	void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework::initialise(OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework* obj)
 	{
 		uint8_t* newINISIALISED_Value = new uint8_t(4);
 		obj->get_ptr_LaunchConcurrency()->get_ptr_Global()->initialise_number_Implemented_Threads(newINISIALISED_Value);//NUMBER OF THREADS
@@ -50,7 +50,7 @@
 		delete newINITIALISED_int8_t;
 	}
 		// get.
-	OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END* OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END_Framework::get_ptr_LaunchConcurrency()
+	OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework::get_ptr_LaunchConcurrency()
 	{
 		return stat_get_ptr_LaunchConcurrency();
 	}
@@ -62,18 +62,18 @@
 		// get.
 		// set.
 	// static.
-	void OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END_Framework::create_ptr_LaunchConcurrency()
+	void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework::create_ptr_LaunchConcurrency()
 	{
-		stat_set_ptr_LaunchConcurrency(new class OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END());
+		stat_set_ptr_LaunchConcurrency(new class OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END());
 		while (stat_get_ptr_LaunchConcurrency() == NULL) { /* wait untill created */ }
 	}
 		// get.
-	OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END* OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END_Framework::stat_get_ptr_LaunchConcurrency()
+	OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework::stat_get_ptr_LaunchConcurrency()
 	{
 		return _ptr_LaunchConcurrency;
 	}
 		// set.
-	void OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END_Framework::stat_set_ptr_LaunchConcurrency(OpenAvrilLIB::LaunchEnableForConcurrentThreadsAt_END* concurrentQue)
+	void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework::stat_set_ptr_LaunchConcurrency(OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END* concurrentQue)
 	{
 		_ptr_LaunchConcurrency = concurrentQue;
 	}

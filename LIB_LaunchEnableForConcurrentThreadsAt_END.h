@@ -4,7 +4,7 @@
 #define LAUNCHENABLEFORCONCURRENTTHREADSATEND_API __declspec(dllimport)
 #endif
 
-namespace OpenAvrilLIB
+namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND
 {
 	class LAUNCHENABLEFORCONCURRENTTHREADSATEND_API CLIBLaunchEnableForConcurrentThreadsAtEND 
 	{
@@ -44,6 +44,7 @@ namespace OpenAvrilLIB
 		static void stat_set_ptr_Framework(class LaunchEnableForConcurrentThreadsAt_END_Framework* newClass);
 	// pointers.
 		// classes.
+		
 		// registers.
 	};
 }
