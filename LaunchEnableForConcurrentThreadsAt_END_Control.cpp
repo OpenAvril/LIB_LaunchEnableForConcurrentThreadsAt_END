@@ -15,16 +15,16 @@
     OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::LaunchEnableForConcurrentThreadsAt_END_Control()
     {
         bool* newDEFAULT_Flagbit1 = new bool(false);
-        create_flag_praisinglaunch(newDEFAULT_Flagbit1);
+        stat_create_flag_praisinglaunch(newDEFAULT_Flagbit1);
         delete newDEFAULT_Flagbit1;
         uint32_t* newDEFAULT_uint32_t = new uint32_t(UINT32_MAX);
-        create_list_Of_launchActive_Count_For_ThreadID(newDEFAULT_uint32_t);
-        create_list_Of_launchIdle_Count_For_ThreadID(newDEFAULT_uint32_t);
+        stat_create_list_Of_launchActive_Count_For_ThreadID(newDEFAULT_uint32_t);
+        stat_create_list_Of_launchIdle_Count_For_ThreadID(newDEFAULT_uint32_t);
         delete newDEFAULT_uint32_t;
-        create_list_for_Que_Of_CoreTolaunch();
+        stat_create_list_for_Que_Of_CoreTolaunch();
         uint8_t* newDEFAULT_int8_t = new uint8_t(INT8_MAX);
-        create_concurrentCycle_Try_CoreId_Index(newDEFAULT_int8_t);
-        create_new_concurrentCycle_Try_CoreId_Index(newDEFAULT_int8_t);
+        stat_create_concurrentCycle_Try_CoreId_Index(newDEFAULT_int8_t);
+        stat_create_new_concurrentCycle_Try_CoreId_Index(newDEFAULT_int8_t);
         delete newDEFAULT_int8_t;
     }
 
@@ -276,19 +276,19 @@
         // get.
         // set.
     // static.
-    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::create_concurrentCycle_Try_CoreId_Index(uint8_t* newDEFAULT_Value)
+    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::stat_create_concurrentCycle_Try_CoreId_Index(uint8_t* newDEFAULT_Value)
     {
         uint8_t* _ptr_concurrentCycle_Try_CoreId_Index = new uint8_t(UINT_MAX);
         while(stat_ptr_get_concurrentCycle_Try_CoreId_Index() == NULL) { }
         stat_set_concurrentCycle_Try_CoreId_Index(*newDEFAULT_Value);
     }
-    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::create_flag_praisinglaunch(bool* newDEFAULT_Flagbit)
+    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::stat_create_flag_praisinglaunch(bool* newDEFAULT_Flagbit)
     {
         bool* _ptr_flag_praisinglaunch = new bool(true);
         while (stat_ptr_get_flag_praisinglaunch() == NULL) {}
         stat_set_flag_praisinglaunch(newDEFAULT_Flagbit);
     }
-    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::create_list_Of_launchActive_Count_For_ThreadID(uint32_t* newDEFAULT_Value)
+    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::stat_create_list_Of_launchActive_Count_For_ThreadID(uint32_t* newDEFAULT_Value)
     {
         std::list<uint32_t>* _ptr_list_Of_launchActive_Count_For_ThreadID = new std::list<uint32_t>();
         while (stat_get_ptr_list_Of_launchActive_Count_For_ThreadID() == NULL) {}
@@ -299,7 +299,7 @@
         }
         
     }
-    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::create_list_Of_launchIdle_Count_For_ThreadID(uint32_t* newDEFAULT_Value)
+    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::stat_create_list_Of_launchIdle_Count_For_ThreadID(uint32_t* newDEFAULT_Value)
     {
         std::list<uint32_t>* _ptr_list_Of_launchIdle_Count_For_ThreadID = new std::list<uint32_t>();
         while (stat_get_ptr_list_Of_launchIdle_Count_For_ThreadID() == NULL) {}
@@ -309,7 +309,7 @@
             stat_set_Item_On_list_Of_launchIdle_Count_For_ThreadID(concurrentThreadID, *newDEFAULT_Value);
         }
     }
-    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::create_list_Of_STATE_For_ConcurrentCore(bool* newDEFAULT_FlagBit)
+    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::stat_create_list_Of_STATE_For_ConcurrentCore(bool* newDEFAULT_FlagBit)
     {
         std::list<uint32_t>* _ptr_list_Of_STATE_For_ConcurrentCore = new std::list<uint32_t>();
         while (stat_get_ptr_list_Of_STATE_For_ConcurrentCore() == NULL) {}
@@ -319,7 +319,7 @@
             stat_set_Item_On_list_Of_STATE_For_ConcurrentCore(concurrentThreadID, *newDEFAULT_FlagBit);
         }
     }
-    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::create_list_for_Que_Of_CoreTolaunch()
+    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::stat_create_list_for_Que_Of_CoreTolaunch()
     {
         std::list<bool>* _ptr_list_Of_STATE_For_ConcurrentCore = new std::list<bool>();
         while (stat_get_ptr_list_Of_Que_Of_CoreTolaunch() == NULL) {}
@@ -329,7 +329,7 @@
             stat_set_Item_On_list_for_Que_Of_CoreTolaunch(concurrentThreadID, concurrentThreadID);
         }
     }
-    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::create_new_concurrentCycle_Try_CoreId_Index(uint8_t* newDEFAULT_Value)
+    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::stat_create_new_concurrentCycle_Try_CoreId_Index(uint8_t* newDEFAULT_Value)
     {
         uint8_t* _ptr_new_concurrentCycle_Try_CoreId_Index = new uint8_t(UINT8_MAX);
         while (stat_get_ptr_new_concurrentCycle_Try_CoreId_Index() == NULL) {}
