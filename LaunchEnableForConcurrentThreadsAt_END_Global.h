@@ -23,6 +23,7 @@ namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND
         // set.
     // static.
         // get.
+        static class LaunchEnableForConcurrentThreadsAt_END_Framework* stat_obj_get_ClassOf(void* obj);
         // set.
 
     private:

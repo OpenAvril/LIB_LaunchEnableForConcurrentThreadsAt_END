@@ -36,8 +36,6 @@ namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND
         static class LaunchEnableForConcurrentThreadsAt_END_Global* stat_get_ptr_Global();
         static class LaunchEnableForConcurrentThreadsAt_END_Control* stat_get_ptr_LaunchConcurrency_Control();
         // set.
-        static void stat_set_ptr_Global(class LaunchEnableForConcurrentThreadsAt_END_Global* newClass);
-        static void stat_set_ptr_LaunchConcurrency_Control(class LaunchEnableForConcurrentThreadsAt_END_Control* newClass);
     // pointers.
         // classes.
         static class LaunchEnableForConcurrentThreadsAt_END* _ptr_LaunchConcurrency;

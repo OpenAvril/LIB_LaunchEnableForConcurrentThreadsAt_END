@@ -19,18 +19,17 @@ namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND
 		// get.
 		// set.
 	// static.
-		//static void* generate_Program();//ToDO: uncomment for C#.
-		static class LaunchEnableForConcurrentThreadsAt_END_Framework* generate_Program();//ToDO: uncomment for C++.
-		static void request_Wait_launch(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t concurrentThreadID);
-		static void thread_End(class LaunchEnableForConcurrentThreadsAt_END_Framework*, uint8_t concurrentThreadID);
+		static void* generate_Program();
+		static void request_Wait_launch(void* obj, unsigned char* bytes);
+		static void thread_End(void* obj, unsigned char* bytes);
 		// get.
-		static uint8_t get_coreId_To_launch(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj);
-		static bool get_Flag_Active(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj);
-		static bool get_Flag_ConcurrentCoreState(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t concurrentThreadID);
-		static bool get_Flag_Idle(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj);
-		static bool get_State_launchBit(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj);
+		static unsigned char* get_coreId_To_launch(void* obj);
+		static bool get_Flag_Active(void* obj);
+		static bool get_Flag_ConcurrentCoreState(void* obj, unsigned char* bytes);
+		static bool get_Flag_Idle(void* obj);
+		static bool get_State_launchBit(void* obj);
 		// set.
-		static void set_Flag_ConcurrentCoreState(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t concurrentThreadID, bool value);
+		static void set_Flag_ConcurrentCoreState(void* obj, unsigned char* bytes, bool newValue);
 
 	private:
 // private.
@@ -40,9 +39,8 @@ namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND
 	// static.
 		static void stat_create_ptr_Framework();
 		// get.
-		static class LaunchEnableForConcurrentThreadsAt_END_Framework* stat_get_ptr_Framework();
+		static LaunchEnableForConcurrentThreadsAt_END_Framework* stat_get_ptr_Framework();
 		// set.
-		static void stat_set_ptr_Framework(class LaunchEnableForConcurrentThreadsAt_END_Framework* newClass);
 	// pointers.
 		// classes.
 		
