@@ -7,71 +7,48 @@ namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND
     public:
 // public.
     // constructor.
-
-    // destructor.
-
-    // dynamic.
-        // get.
-        // set.
-    // static.
-        // get.
-        // set.
-
-// private.
-    // dynamic.
-        // classes.
-            // create.
-            // get.
-            // set.
-        // registers.
-            // create.
-            // get.
-            // set.
-    // static.
-        // classes.
-            // create.
-            // get.
-            // set.
-        // registers.
-            // create.
-            // get.
-            // set.
-
-
-// constructor.
         LaunchEnableForConcurrentThreadsAt_END();
 
-// destructor.
+    // destructor.
         virtual ~LaunchEnableForConcurrentThreadsAt_END();
 
-// public.
     // dynamic.
-        void initialise_Control(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj);
         void thread_Start(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t concurrentThreadID);
         void thread_End(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t concurrentThreadID);
+        // create.
+        void dyn_initialise_Control(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj);
         // get.
-        class LaunchEnableForConcurrentThreadsAt_END_Global* get_ptr_Global();
-        class LaunchEnableForConcurrentThreadsAt_END_Control* get_ptr_LaunchConcurrency_Control();
+        class LaunchEnableForConcurrentThreadsAt_END_Global* dyn_CLASS_get_ptr_Global();
+        class LaunchEnableForConcurrentThreadsAt_END_Control* dyn_CLASS_get_ptr_LaunchConcurrency_Control();
         // set.
     // static.
         // get.
         // set.
 
-    private:
 // private.
     // dynamic.
-        // get.
-        // set.
-    // static.
-        static void stat_create_ptr_Global();
-        static void stat_create_ptr_LaunchConcurrency_Control(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj);
-        // get.
-        static class LaunchEnableForConcurrentThreadsAt_END_Global* stat_get_ptr_Global();
-        static class LaunchEnableForConcurrentThreadsAt_END_Control* stat_get_ptr_LaunchConcurrency_Control();
-        // set.
-    // pointers.
         // classes.
-        static class LaunchEnableForConcurrentThreadsAt_END* _stat_CLASS_ptr_LaunchConcurrency;
+            // create.
+            // get.
+            // set.
         // registers.
+            // create.
+            // get.
+            // set.
+    // static.
+        // classes.
+        static class LaunchEnableForConcurrentThreadsAt_END_Global* _stat_CLASS_ptr_Global;
+        static class LaunchEnableForConcurrentThreadsAt_END_Control* _stat_CLASS_ptr_LaunchConcurrency_Control;
+            // create.
+        static void stat_CLASS_create_ptr_Global();
+        static void stat_CLASS_create_ptr_LaunchConcurrency_Control(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj);
+            // get.
+            // set.
+        static class LaunchEnableForConcurrentThreadsAt_END_Global* stat_CLASS_get_ptr_Global();
+        static class LaunchEnableForConcurrentThreadsAt_END_Control* stat_CLASS_get_ptr_LaunchConcurrency_Control();
+        // registers.
+            // create.
+            // get.
+            // set.
     };
 }
