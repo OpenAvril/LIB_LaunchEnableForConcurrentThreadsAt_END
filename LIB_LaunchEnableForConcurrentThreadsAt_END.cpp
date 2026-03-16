@@ -32,7 +32,7 @@
         std::cout << "____ / ____\\__ \\@  @/ ___/_____\\_____" << std::endl;
         std::cout << "|              |\\../|               |" << std::endl;
         std::cout << "|               \\VV/                |" << std::endl;
-        std::cout << "|        MIT Write Que .dll         |" << std::endl;
+        std::cout << "|        MIT Launch Que .dll        |" << std::endl;
         std::cout << "|___________________________________|" << std::endl;
         std::cout << "|    / \\ /        \\\\        \\ /\\    |" << std::endl;
         std::cout << "|  /    V          ))        V   \\  |" << std::endl;
@@ -106,38 +106,8 @@
             // create.
             // get.
             // set.
-
-
-
-
-
-
-
-
-
-
-
-// public.
-    // dynamic.
-        // get.
-        // set.
-    // static.
-
-        // get.
-
-        // set.
     void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND::set_Flag_ConcurrentCoreState(void* obj, unsigned char* bytes, bool value)
     {
         uint8_t concurrentThreadID = *bytes;
         OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_obj_get_ClassOf(obj)->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->set_Item_On_list_Of_STATE_For_ConcurrentCore(concurrentThreadID, value);
     }
-
-// private.
-    // dynamic.
-        // get.
-        // set.
-    // static.
-
-        // get.
-
-        // set.
