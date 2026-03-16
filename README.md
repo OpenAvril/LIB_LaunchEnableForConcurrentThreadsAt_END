@@ -16,104 +16,186 @@ Version: 24H2
 
 ## Using
 ### C++
-#### LIB_LaunchEnableForConcurrentThreadsAt_SERVER.h
+#### LIB_LaunchEnableForConcurrentThreadsAt_END.h
 ````
-#ifdef LAUNCHENABLEFORCONCURRENTTHREADSATSERVER_EXPORTS
-#define LAUNCHENABLEFORCONCURRENTTHREADSATSERVER_API __declspec(dllexport)
+#ifdef LAUNCHENABLEFORCONCURRENTTHREADSATEND_EXPORTS
+#define LAUNCHENABLEFORCONCURRENTTHREADSATEND_API __declspec(dllexport)
 #else
-#define LAUNCHENABLEFORCONCURRENTTHREADSATSERVER_API __declspec(dllimport)
+#define LAUNCHENABLEFORCONCURRENTTHREADSATEND_API __declspec(dllimport)
 #endif
-
-namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER
+extern "C"
 {
-	class LAUNCHENABLEFORCONCURRENTTHREADSATSERVER_API CLIBLaunchEnableForConcurrentThreadsAtSERVER
+	namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND
 	{
-	public:
-		// constructor.
-		CLIBLaunchEnableForConcurrentThreadsAtSERVER();
+		class LAUNCHENABLEFORCONCURRENTTHREADSATEND_API CLIBLaunchEnableForConcurrentThreadsAtEND
+		{
+// public.
+	// constructor.
+			CLIBLaunchEnableForConcurrentThreadsAtEND();
 
-		// destructor.
-
-		// public.
-			// dynamic.
-				// get.
-				// set.
-			// static.
-		//static void* generate_Program();//ToDO: uncomment for C#.
-		static class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* generate_Program();//ToDO: uncomment for C++.
-		static void request_Wait_launch(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, uint8_t concurrentThreadID);
-		static void thread_End(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework*, uint8_t concurrentThreadID);
+	// destructor.
+			virtual ~CLIBLaunchEnableForConcurrentThreadsAtEND();
+	// dynamic.
 		// get.
-		static uint8_t get_coreId_To_launch(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
-		static bool get_Flag_Active(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
-		static bool get_Flag_ConcurrentCoreState(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, uint8_t concurrentThreadID);
-		static bool get_Flag_Idle(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
-		static bool get_State_launchBit(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
 		// set.
-		static void set_Flag_ConcurrentCoreState(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, uint8_t concurrentThreadID, bool value);
-
-	private:
-		// private.
-			// dynamic.
-				// get.
-				// set.
-			// static.
-		static void stat_create_ptr_Framework();
+	// static.
+			static void* generate_Program();
+			static void terminate_Progaram();
+			static void request_Wait_launch(void* obj, unsigned char* bytes);
+			static void thread_End(void* obj, unsigned char* bytes);
 		// get.
-		static class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* stat_get_ptr_Framework();
+			static unsigned char* get_coreId_To_launch(void* obj);
+			static bool get_Flag_Active(void* obj);
+			static bool get_Flag_ConcurrentCoreState(void* obj, unsigned char* bytes);
+			static bool get_Flag_Idle(void* obj);
+			static bool get_State_launchBit(void* obj);
 		// set.
-		static void stat_set_ptr_Framework(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* newClass);
-		// pointers.
-			// classes.
+			static void set_Flag_ConcurrentCoreState(void* obj, unsigned char* bytes, bool newValue);
 
-			// registers.
-	};
+// private.
+	// dynamic.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
+	// static.
+		// classes.
+			// create.
+			static void stat_CLASS_create_ptr_Framework();
+			// get.
+			static LaunchEnableForConcurrentThreadsAt_END_Framework* stat_CLASS_get_ptr_Framework();
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
+		};
+	}
 }
 ````
 
-### C#
-#### IMPORT_LIB_LaunchEnableForConcurrentThreadsAt_CLIENT.cs
+#### LIB_LaunchEnableForConcurrentThreadsAt_END.cpp
 ````
-﻿using System.Runtime.InteropServices;
-using System.Security;
-using System;
+#include "pch.h"
+#include "framework.h"
+#include "LIB_LaunchEnableForConcurrentThreadsAt_END.h"
 
-namespace OpenAvrilCLIB
-{
-    [SuppressUnmanagedCodeSecurity]
-    public static class LaunchEnableForConcurrentThreadsAtCLIENT
+
+// pointer.
+    // classes.
+    OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework* _ptr_Framework_LaunchEnableForConcurrentThreadsAt_END = NULL;
+    // registers.
+
+// public.
+    // constructor.
+    OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND()
     {
-        [DllImport("LIB_LaunchEnableForConcurrentThreadsAt_CLIENT.dll", EntryPoint = "?create_Program@CLIBLaunchEnableForConcurrentThreadsAtCLIENT@OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtCLIENT@@SAPAXXZ")]
-        public static extern IntPtr generate_Program();
 
-        [DllImport("LIB_LaunchEnableForConcurrentThreadsAt_CLIENT.dll", EntryPoint = "?request_Wait_launch@CLIBLaunchEnableForConcurrentThreadsAtCLIENT@OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtCLIENT@@SAXPAVLaunchEnableForConcurrentThreadsAt_CLIENT_Framework@2@E@Z")]
-        public static extern void request_Wait_Launch(IntPtr obj, byte concurrent_CoreId);
-
-        [DllImport("LIB_LaunchEnableForConcurrentThreadsAt_CLIENT.dll", EntryPoint = "?thread_End@CLIBLaunchEnableForConcurrentThreadsAtCLIENT@OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtCLIENT@@SAXPAVLaunchEnableForConcurrentThreadsAt_CLIENT_Framework@2@E@Z")]
-        public static extern void thread_End(IntPtr obj, byte concurrent_CoreId);
-
-        [DllImport("LIB_LaunchEnableForConcurrentThreadsAt_CLIENT.dll", EntryPoint = "?get_coreId_To_launch@CLIBLaunchEnableForConcurrentThreadsAtCLIENT@OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtCLIENT@@SAEPAVLaunchEnableForConcurrentThreadsAt_CLIENT_Framework@2@@Z")]
-        public static extern byte get_coreId_To_Launch(IntPtr obj);
-
-        [DllImport("LIB_LaunchEnableForConcurrentThreadsAt_CLIENT.dll", EntryPoint = "?get_Flag_Active@CLIBLaunchEnableForConcurrentThreadsAtCLIENT@OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtCLIENT@@SA_NPAVLaunchEnableForConcurrentThreadsAt_CLIENT_Framework@2@@Z")]
-        public static extern bool get_Flag_Active(IntPtr obj);
-
-        [DllImport("LIB_LaunchEnableForConcurrentThreadsAt_CLIENT.dll", EntryPoint = "?get_Flag_ConcurrentCoreState@CLIBLaunchEnableForConcurrentThreadsAtCLIENT@OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtCLIENT@@SA_NPAVLaunchEnableForConcurrentThreadsAt_CLIENT_Framework@2@E@Z")]
-        public static extern bool get_Flag_ConcurrentCoreState(IntPtr obj, byte concurrent_CoreId);
-
-        [DllImport("LIB_LaunchEnableForConcurrentThreadsAt_CLIENT.dll", EntryPoint = "?get_Flag_Idle@CLIBLaunchEnableForConcurrentThreadsAtCLIENT@OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtCLIENT@@SA_NPAVLaunchEnableForConcurrentThreadsAt_CLIENT_Framework@2@@Z")]
-        public static extern bool get_Flag_Idle(IntPtr obj);
-
-        [DllImport("LIB_LaunchEnableForConcurrentThreadsAt_CLIENT.dll", EntryPoint = "?get_State_launchBit@CLIBLaunchEnableForConcurrentThreadsAtCLIENT@OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtCLIENT@@SA_NPAVLaunchEnableForConcurrentThreadsAt_CLIENT_Framework@2@@Z")]
-        public static extern bool get_State_LaunchBit(IntPtr obj);
     }
-}
-````
 
-### Java (build Library implementations for C# with InptPtr, from the dll exports void* in C++, uesed as Pointer in Java).
-#### x
-````
+    // destructor.
+    OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND::~CLIBLaunchEnableForConcurrentThreadsAtEND()
+    {
+
+    }
+
+    // dynamic.
+    void* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND::generate_Program()
+    {
+        stat_CLASS_create_ptr_Framework();
+        stat_CLASS_get_ptr_Framework()->initialise(stat_CLASS_get_ptr_Framework());
+        std::cout << "        ,     \\      /      ," << std::endl;
+        std::cout << "       / \\    )\\ __ /(     / \\ " << std::endl;
+        std::cout << "      /   \\   (_\\  /_)    /   \\ " << std::endl;
+        std::cout << "____ / ____\\__ \\@  @/ ___/_____\\_____" << std::endl;
+        std::cout << "|              |\\../|               |" << std::endl;
+        std::cout << "|               \\VV/                |" << std::endl;
+        std::cout << "|        MIT Write Que .dll         |" << std::endl;
+        std::cout << "|___________________________________|" << std::endl;
+        std::cout << "|    / \\ /        \\\\        \\ /\\    |" << std::endl;
+        std::cout << "|  /    V          ))        V   \\  |" << std::endl;
+        std::cout << "|/                //               \\| " << std::endl;
+        std::cout << "`                 V                 '" << std::endl;
+        return (void*)stat_CLASS_get_ptr_Framework();
+    }
+    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND::terminate_Progaram()
+    {
+        delete _ptr_Framework_LaunchEnableForConcurrentThreadsAt_END;
+    }
+    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND::request_Wait_launch(void* obj, unsigned char* bytes)
+    {
+        OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_obj_get_ClassOf(obj)->get_ptr_LaunchConcurrency()->thread_Start(OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_obj_get_ClassOf(obj), (uint8_t)*bytes);
+    }
+    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND::thread_End(void* obj, unsigned char* bytes)
+    {
+        OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_obj_get_ClassOf(obj)->get_ptr_LaunchConcurrency()->thread_End(OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_obj_get_ClassOf(obj), (uint8_t)*bytes);
+    }
+        // get.
+    unsigned char* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND::get_coreId_To_launch(void* obj)
+    {
+        return (unsigned char*)OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_obj_get_ClassOf(obj)->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_for_Que_Of_CoreTolaunch(0);
+    }
+    bool OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND::get_Flag_Active(void* obj)
+    {
+        return OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_obj_get_ClassOf(obj)->get_ptr_LaunchConcurrency()->get_ptr_Global()->get_flag_core_ACTIVE();
+    }
+    bool OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND::get_Flag_ConcurrentCoreState(void* obj, unsigned char* bytes)
+    {
+        return OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_obj_get_ClassOf(obj)->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_Of_STATE_For_ConcurrentCore((uint8_t)*bytes);
+    }
+    bool OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND::get_Flag_Idle(void* obj)
+    {
+        return OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_obj_get_ClassOf(obj)->get_ptr_LaunchConcurrency()->get_ptr_Global()->get_flag_core_IDLE();
+    }
+    bool OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND::get_State_launchBit(void* obj)
+    {
+        return OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_obj_get_ClassOf(obj)->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_Of_STATE_For_ConcurrentCore(OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_obj_get_ClassOf(obj)->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->get_Item_On_list_for_Que_Of_CoreTolaunch(0));
+    }
+        // set.
+    // static.
+        // get.
+        // set.
+
+// private.
+    // dynamic.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+    // static.
+        // classes.
+            // create.
+    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND::stat_CLASS_create_ptr_Framework()
+    {
+        _ptr_Framework_LaunchEnableForConcurrentThreadsAt_END = new OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework();
+        while (stat_CLASS_get_ptr_Framework() == NULL) {}
+    }
+            // get.
+    OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND::stat_CLASS_get_ptr_Framework()
+    {
+        return _ptr_Framework_LaunchEnableForConcurrentThreadsAt_END;
+    }
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND::set_Flag_ConcurrentCoreState(void* obj, unsigned char* bytes, bool value)
+    {
+        uint8_t concurrentThreadID = *bytes;
+        OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_obj_get_ClassOf(obj)->get_ptr_LaunchConcurrency()->get_ptr_LaunchConcurrency_Control()->set_Item_On_list_Of_STATE_For_ConcurrentCore(concurrentThreadID, value);
+    }
 ````
 
 ## TestBench(s) in C#.
+ - https://github.com/OpenAvril/TESTBENCH_OpenAvril
+
  - https://github.com/OpenAvril/TESTBENCH_OpenAvril
