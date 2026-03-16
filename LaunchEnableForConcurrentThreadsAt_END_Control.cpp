@@ -298,7 +298,7 @@
     }
     void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::stat_REG_create_list_for_Que_Of_CoreTolaunch()
     {
-        _stat_REG_ptr_list_Of_STATE_For_ConcurrentCore = new std::list<bool>(NULL);
+        _stat_REG_ptr_list_for_Que_Of_CoreTolaunch = new std::list<uint8_t>(NULL);
         while (stat_REG_get_ptr_List_QUE_Of_CoreTolaunch() == NULL) {}
         *_stat_REG_ptr_list_Of_STATE_For_ConcurrentCore = { NULL, NULL, NULL };//NUMBEROF CONCURRENT THREADS
         for (uint8_t concurrentThreadID = 0; concurrentThreadID < sizeof(*stat_REG_get_ptr_List_QUE_Of_CoreTolaunch()); concurrentThreadID++)
