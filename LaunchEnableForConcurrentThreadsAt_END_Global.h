@@ -25,6 +25,7 @@ namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND
         static class LaunchEnableForConcurrentThreadsAt_END_Framework* stat_obj_get_ClassOf(void* obj);
         // set.
 
+    private:
 // private.
     // dynamic.
         // classes.
@@ -47,9 +48,7 @@ namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND
         static void stat_REG_create_flag_thread_STATE(bool* newDEFAULT_Flag);
         static void stat_REG_create_number_Implemented_Threads(uint8_t* newDEFAULT_Value);
             // get.
-        static bool stat_REG_get_Item_ptr_flag_thread_2STATE_ACTIVE();
-        static bool stat_REG_get_Item_ptr_flag_thread_2STATE_IDLE();
-        static uint8_t stat_REG_get_number_Implemented_Threads();
+        static uint8_t* stat_REG_get_number_Implemented_Threads();
         static bool* stat_REG_get_ptr_flag_thread_2STATE();
             // set.
         static void stat_REG_set_flag_thread_2STATE_ACTIVE(bool value);

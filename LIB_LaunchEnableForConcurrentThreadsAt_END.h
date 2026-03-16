@@ -9,6 +9,7 @@ extern "C"
 	{
 		class LAUNCHENABLEFORCONCURRENTTHREADSATEND_API CLIBLaunchEnableForConcurrentThreadsAtEND
 		{
+		public:
 // public.
 	// constructor.
 
@@ -31,6 +32,7 @@ extern "C"
 		// set.
 			static void set_Flag_ConcurrentCoreState(void* obj, unsigned char* bytes, bool newValue);
 
+		private:
 // private.
 	// dynamic.
 		// classes.

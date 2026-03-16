@@ -38,15 +38,15 @@
         // get.
     bool OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::dyn_REG_get_ptr_flag_thread_2STATE_ACTIVE()
     {
-        return stat_REG_get_Item_ptr_flag_thread_2STATE_ACTIVE();
+        return *stat_REG_get_ptr_flag_thread_2STATE();
     }
     bool OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::dyn_REG_get_ptr_flag_thread_2STATE_IDLE()
     {
-        return stat_REG_get_Item_ptr_flag_thread_2STATE_IDLE();
+        return !*stat_REG_get_ptr_flag_thread_2STATE();
     }
     uint8_t OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::dyn_REG_get_number_Implemented_Threads()
     {
-        return stat_REG_get_number_Implemented_Threads();
+        return *stat_REG_get_number_Implemented_Threads();
     }
         // set.
     // static.
@@ -88,17 +88,9 @@
         *_stat_REG_ptr_number_Implemented_Threads = *newDEFAULT_Value;
     }
             // get.
-    bool OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_REG_get_Item_ptr_flag_thread_2STATE_ACTIVE()
+    uint8_t* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_REG_get_number_Implemented_Threads()
     {
-        return *_stat_REG_ptr_flag_thread_2STATE;
-    }
-    bool OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_REG_get_Item_ptr_flag_thread_2STATE_IDLE()
-    {
-        return !*_stat_REG_ptr_flag_thread_2STATE;
-    }
-    uint8_t OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_REG_get_number_Implemented_Threads()
-    {
-        return *_stat_REG_ptr_number_Implemented_Threads;
+        return _stat_REG_ptr_number_Implemented_Threads;
     }
     bool* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_REG_get_ptr_flag_thread_2STATE()
     {
