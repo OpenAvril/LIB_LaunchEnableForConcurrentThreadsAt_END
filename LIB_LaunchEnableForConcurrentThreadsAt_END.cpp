@@ -24,7 +24,7 @@
         std::cout << "____ / ____\\__ \\@  @/ ___/_____\\_____" << std::endl;
         std::cout << "|              |\\../|               |" << std::endl;
         std::cout << "|               \\VV/                |" << std::endl;
-        std::cout << "|          MIT EXAMPLE .dll         |" << std::endl;
+        std::cout << "|        MIT Launch Que .dll        |" << std::endl;
         std::cout << "|___________________________________|" << std::endl;
         std::cout << "|    / \\ /        \\\\        \\ /\\    |" << std::endl;
         std::cout << "|  /    V          ))        V   \\  |" << std::endl;

@@ -48,7 +48,7 @@ extern "C"
 			// create.
 			static void stat_CLASS_create_ptr_Framework();
 			// get.
-			static LaunchEnableForConcurrentThreadsAt_END_Framework* stat_CLASS_get_ptr_Framework();
+			static class LaunchEnableForConcurrentThreadsAt_END_Framework* stat_CLASS_get_ptr_Framework();
 			// set.
 		// registers.
 			// create.
