@@ -1,8 +1,5 @@
 #include "pch.h"
 
-// pointers.
-    // classes.
-    // registers.
     uint8_t* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::_stat_REG_ptr_concurrentCycle_Try_CoreId_Index = NULL;
     bool* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::_stat_REG_ptr_flag_praisinglaunch = NULL;
     std::list<uint32_t>* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::_stat_REG_ptr_list_Of_launchActive_Count_For_ThreadID = NULL;
@@ -10,9 +7,6 @@
     std::list<bool>* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::_stat_REG_ptr_list_Of_STATE_For_ConcurrentCore = NULL;
     std::list<uint8_t>* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::_stat_REG_ptr_list_for_Que_Of_CoreTolaunch = NULL;
     uint8_t* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::_stat_REG_ptr_new_concurrentCycle_Try_CoreId_Index = NULL;
-
-// public.
-    // constructor.
     OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::LaunchEnableForConcurrentThreadsAt_END_Control()
     {
         bool* newDEFAULT_Flagbit1 = new bool(true);
@@ -28,8 +22,6 @@
         stat_REG_create_new_concurrentCycle_Try_CoreId_Index(newDEFAULT_int8_t);
         delete newDEFAULT_int8_t;
     }
-
-    // destructor.
     OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::~LaunchEnableForConcurrentThreadsAt_END_Control()
     {
         delete _stat_REG_ptr_concurrentCycle_Try_CoreId_Index;
@@ -40,8 +32,6 @@
         delete _stat_REG_ptr_list_Of_STATE_For_ConcurrentCore;
         delete _stat_REG_ptr_list_for_Que_Of_CoreTolaunch;
     }
-
-    // dynamic.
     void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::launchEnable_Activate(OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework* obj)
     {
         obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_LaunchConcurrency_Control()->set_Item_On_list_Of_STATE_For_ConcurrentCore(obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_LaunchConcurrency_Control()->dyn_REG_get_Item_On_list_Of_STATE_For_ConcurrentCore(0), obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_ptr_flag_thread_2STATE_ACTIVE());
@@ -126,7 +116,6 @@
             }
         }
     }
-        // create.
     void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::dyn_REG_initialise_concurrentCycle_Try_CoreId_Index(uint8_t* newINITIALISED_Value)
     {
         stat_REG_set_concurrentCycle_Try_CoreId_Index(*newINITIALISED_Value);
@@ -161,7 +150,6 @@
         std::advance(temp, slotID);
         *temp = slotID;
     }
-        // get.
     uint8_t OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::dyn_REG_get_concurrentCycle_Try_CoreId_Index()
     {
         return *stat_REG_get_ptr_concurrentCycle_Try_CoreId_Index();
@@ -198,7 +186,6 @@
     {
         return *stat_REG_get_ptr_new_concurrentCycle_Try_CoreId_Index();
     }
-        // set.
     void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::set_concurrentCycle_Try_CoreId_Index(uint8_t newValue)
     {
         stat_REG_set_concurrentCycle_Try_CoreId_Index(newValue);
@@ -235,12 +222,6 @@
     {
         stat_REG_set_new_concurrentCycle_Try_CoreId_Index(newValue);
     }
-    // static.
-        // get.
-        // set.
-
-// private.
-    // dynamic.
     void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::dynamicStagger(OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t concurrentThreadID)
     {
         if (obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_LaunchConcurrency_Control()->dyn_REG_get_concurrentCycle_Try_CoreId_Index() == concurrentThreadID)
@@ -273,21 +254,6 @@
         obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_LaunchConcurrency_Control()->set_Item_On_list_for_Que_Of_CoreTolaunch(concurrentThreadID_A, obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_LaunchConcurrency_Control()->dyn_REG_get_Item_On_list_for_Que_Of_CoreTolaunch(concurrentThreadID_B));
         obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_LaunchConcurrency_Control()->set_Item_On_list_for_Que_Of_CoreTolaunch(concurrentThreadID_B, temp_UnnsignedChar);
     }
-        // classes.
-            // create.
-            // get.
-            // set.
-        // registers.
-            // create.
-            // get.
-            // set.
-    // static.
-        // classes.
-            // create.
-            // get.
-            // set.
-        // registers.
-            // create.
     void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::stat_REG_create_concurrentCycle_Try_CoreId_Index(uint8_t* newDEFAULT_Value)
     {
         _stat_REG_ptr_concurrentCycle_Try_CoreId_Index = new uint8_t(NULL);
@@ -346,7 +312,6 @@
         while (stat_REG_get_ptr_new_concurrentCycle_Try_CoreId_Index() == NULL) {}
         *_stat_REG_ptr_new_concurrentCycle_Try_CoreId_Index = *newDEFAULT_Value;
     }
-            // get.
     uint8_t* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::stat_REG_get_ptr_concurrentCycle_Try_CoreId_Index()
     {
         return _stat_REG_ptr_concurrentCycle_Try_CoreId_Index;
@@ -375,7 +340,6 @@
     {
         return _stat_REG_ptr_new_concurrentCycle_Try_CoreId_Index;
     }
-            // set.
     void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::stat_REG_set_concurrentCycle_Try_CoreId_Index(uint8_t newValue)
     {
         *_stat_REG_ptr_concurrentCycle_Try_CoreId_Index = newValue;
