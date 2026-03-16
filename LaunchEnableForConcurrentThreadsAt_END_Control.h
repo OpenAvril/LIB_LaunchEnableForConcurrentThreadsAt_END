@@ -4,6 +4,38 @@ namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND
 {
     class LaunchEnableForConcurrentThreadsAt_END_Control
     {
+// public.
+    // constructor.
+
+    // destructor.
+
+    // dynamic.
+        // get.
+        // set.
+    // static.
+        // get.
+        // set.
+
+// private.
+    // dynamic.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+    // static.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+
 // classes.
 
 // registers.

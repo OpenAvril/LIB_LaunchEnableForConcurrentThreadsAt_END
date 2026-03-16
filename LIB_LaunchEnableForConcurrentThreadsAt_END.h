@@ -8,18 +8,18 @@ namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND
 {
 	class LAUNCHENABLEFORCONCURRENTTHREADSATEND_API CLIBLaunchEnableForConcurrentThreadsAtEND 
 	{
-	public:
-// constructor.
+// public.
+	// constructor.
 		CLIBLaunchEnableForConcurrentThreadsAtEND();
 
-// destructor.
-
-// public.
+	// destructor.
+		virtual ~CLIBLaunchEnableForConcurrentThreadsAtEND();
 	// dynamic.
 		// get.
 		// set.
 	// static.
 		static void* generate_Program();
+		static void terminate_Progaram();
 		static void request_Wait_launch(void* obj, unsigned char* bytes);
 		static void thread_End(void* obj, unsigned char* bytes);
 		// get.
@@ -31,19 +31,26 @@ namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND
 		// set.
 		static void set_Flag_ConcurrentCoreState(void* obj, unsigned char* bytes, bool newValue);
 
-	private:
 // private.
 	// dynamic.
-		// get.
-		// set.
-	// static.
-		static void stat_create_ptr_Framework();
-		// get.
-		static LaunchEnableForConcurrentThreadsAt_END_Framework* stat_get_ptr_Framework();
-		// set.
-	// pointers.
 		// classes.
-		
+			// create.
+			// get.
+			// set.
 		// registers.
+			// create.
+			// get.
+			// set.
+	// static.
+		// classes.
+			// create.
+		static void stat_CLASS_create_ptr_Framework();
+			// get.
+		static LaunchEnableForConcurrentThreadsAt_END_Framework* stat_CLASS_get_ptr_Framework();
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
 	};
 }
