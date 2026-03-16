@@ -11,10 +11,9 @@ extern "C"
 		{
 // public.
 	// constructor.
-			CLIBLaunchEnableForConcurrentThreadsAtEND();
 
 	// destructor.
-			virtual ~CLIBLaunchEnableForConcurrentThreadsAtEND();
+
 	// dynamic.
 		// get.
 		// set.
