@@ -3,19 +3,23 @@
 // pointers.
     // classes.
     // registers.
-    bool* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::_stat_REG_ptr_flag_thread_2STATE = NULL;
+bool* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::_stat_REG_ptr_flag_thread_2STATE = NULL;//1=ACTIVE, 0=IDLE.
     uint8_t* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::_stat_REG_ptr_number_Implemented_Threads = NULL;
 
 // public.
     // constructor.
     OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::LaunchEnableForConcurrentThreadsAt_END_Global()
     {
+        std::cout << "entered CONSTRUCTOR LaunchEnableForConcurrentThreadsAt_END_Global()" << std::endl;
         bool* newDEFAULT_Flag = new bool(true);
+        while (newDEFAULT_Flag == NULL) {}
         stat_REG_create_flag_thread_STATE(newDEFAULT_Flag);
         delete newDEFAULT_Flag;
         uint8_t* newDEFAULT_Value = new uint8_t(INT8_MAX);
+        while (newDEFAULT_Value == NULL) {}
         stat_REG_create_number_Implemented_Threads(newDEFAULT_Value);
         delete newDEFAULT_Value;
+        std::cout << "entered CONSTRUCTOR LaunchEnableForConcurrentThreadsAt_END_Global()" << std::endl;
     }
 
     // destructor.
@@ -77,15 +81,19 @@
             // create.
     void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_REG_create_flag_thread_STATE(bool* newDEFAULT_Flag)
     {
+        std::cout << "enterred stat_REG_create_flag_thread_STATE()" << std::endl;
         _stat_REG_ptr_flag_thread_2STATE = new bool(NULL);
         while (stat_REG_get_ptr_flag_thread_2STATE() == NULL) {}
         *_stat_REG_ptr_flag_thread_2STATE = *newDEFAULT_Flag;
+        std::cout << "exiting stat_REG_create_flag_thread_STATE()" << std::endl;
     }
     void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_REG_create_number_Implemented_Threads(uint8_t* newDEFAULT_Value)
     {
+        std::cout << "enterred stat_REG_create_number_Implemented_Threads()" << std::endl;
         _stat_REG_ptr_number_Implemented_Threads = new uint8_t(NULL);
         while (stat_REG_get_number_Implemented_Threads() == NULL) {}
         *_stat_REG_ptr_number_Implemented_Threads = *newDEFAULT_Value;
+        std::cout << "exiting stat_REG_create_number_Implemented_Threads()" << std::endl;
     }
             // get.
     uint8_t* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_REG_get_number_Implemented_Threads()

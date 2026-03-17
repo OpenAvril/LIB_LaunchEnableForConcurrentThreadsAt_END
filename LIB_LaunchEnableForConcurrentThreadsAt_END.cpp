@@ -16,6 +16,8 @@
     // dynamic.
     void* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND::generate_Program()
     {
+        std::cout << "entered CLIBLaunchEnableForConcurrentThreadsAtEND::generate_Program()" << std::endl;
+        std::cout << "" << std::endl;
         stat_CLASS_create_ptr_Framework();
         stat_CLASS_get_ptr_Framework()->dyn_initialise(stat_CLASS_get_ptr_Framework());
         std::cout << "        ,     \\      /      ," << std::endl;
@@ -30,6 +32,8 @@
         std::cout << "|  /    V          ))        V   \\  |" << std::endl;
         std::cout << "|/                //               \\| " << std::endl;
         std::cout << "`                 V                 '" << std::endl;
+        std::cout << "" << std::endl;
+        std::cout << "exiting CLIBLaunchEnableForConcurrentThreadsAtEND::generate_Program()" << std::endl;
         return (void*)stat_CLASS_get_ptr_Framework();
     }
     void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND::terminate_Progaram()
@@ -85,8 +89,10 @@
             // create.
     void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND::stat_CLASS_create_ptr_Framework()
     {
-        _ptr_Framework_LaunchEnableForConcurrentThreadsAt_END = new OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework();
+        std::cout << "" << std::endl;
+        _ptr_Framework_LaunchEnableForConcurrentThreadsAt_END = new class OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework();
         while (stat_CLASS_get_ptr_Framework() == NULL) {}
+        std::cout << "" << std::endl;
     }
             // get.
     OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND::stat_CLASS_get_ptr_Framework()
@@ -100,6 +106,5 @@
             // set.
     void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForConcurrentThreadsAtEND::set_Flag_ConcurrentCoreState(void* obj, unsigned char* bytes, bool value)
     {
-        uint8_t concurrentThreadID = *bytes;
-        OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_obj_get_ClassOf(obj)->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_LaunchConcurrency_Control()->set_Item_On_list_Of_STATE_For_ConcurrentCore(concurrentThreadID, value);
+        OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_obj_get_ClassOf(obj)->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_LaunchConcurrency_Control()->set_Item_On_list_Of_STATE_For_ConcurrentCore((uint8_t)&bytes, value);
     }

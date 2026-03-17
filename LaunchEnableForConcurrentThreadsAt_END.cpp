@@ -55,9 +55,9 @@
         }
     }
         // create.
-    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END::dyn_initialise_Control(OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework* obj)
+    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END::dyn_initialise_Control()
     {
-        obj->dyn_CLASS_get_ptr_LaunchConcurrency()->stat_CLASS_create_ptr_LaunchConcurrency_Control(obj);
+        stat_CLASS_create_ptr_LaunchConcurrency_Control();
     }
         // get.
     OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END::dyn_CLASS_get_ptr_Global()
@@ -91,7 +91,7 @@
         _stat_CLASS_ptr_Global = new class OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global();
         while (stat_CLASS_get_ptr_Global() == NULL) {}
     }
-    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END::stat_CLASS_create_ptr_LaunchConcurrency_Control(OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework* obj)
+    void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END::stat_CLASS_create_ptr_LaunchConcurrency_Control()
     {
         _stat_CLASS_ptr_LaunchConcurrency_Control = new class OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control();
         while (stat_CLASS_get_ptr_LaunchConcurrency_Control() == NULL) {}
