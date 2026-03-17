@@ -35,6 +35,18 @@ uint8_t OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcu
 {
     return *stat_REG_get_number_Implemented_Threads();
 }
+unsigned char* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_uint8_t_to_ByteArray(uint8_t uint8_t_Value)
+{
+    unsigned char* bytes_array;
+    std::memcpy(&bytes_array, &uint8_t_Value, sizeof(uint8_t_Value));
+    return bytes_array;
+}
+uint8_t OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_ByteArray_to_uint8_t(unsigned char* bytes)
+{
+    uint8_t cpp_uint8_t_value;
+    std::memcpy(&cpp_uint8_t_value, bytes, sizeof(cpp_uint8_t_value));
+    return cpp_uint8_t_value;
+}
 OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_obj_get_ClassOf(void* obj)
 {
     return reinterpret_cast<OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework*>(obj);
