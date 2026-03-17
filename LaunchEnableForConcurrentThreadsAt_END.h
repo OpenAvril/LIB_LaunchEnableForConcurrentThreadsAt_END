@@ -6,9 +6,9 @@ namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND
     public:
         LaunchEnableForConcurrentThreadsAt_END();
         virtual ~LaunchEnableForConcurrentThreadsAt_END();
-        void dyn_thread_Start(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t concurrentThreadID);
-        void dyn_thread_End(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t concurrentThreadID);
-        void dyn_initialise_Control();
+        void app_thread_Start(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t concurrentThreadID);
+        void app_thread_End(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t concurrentThreadID);
+        void app_initialise_Control();
         class LaunchEnableForConcurrentThreadsAt_END_Global* dyn_CLASS_get_ptr_Global();
         class LaunchEnableForConcurrentThreadsAt_END_Control* dyn_CLASS_get_ptr_LaunchConcurrency_Control();
     private:

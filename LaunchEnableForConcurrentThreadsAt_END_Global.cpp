@@ -15,11 +15,11 @@ OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThr
     delete _stat_REG_ptr_flag_thread_2STATE;
     delete _stat_REG_ptr_number_Implemented_Threads;
 }
-void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::dyn_initialise_flag_core_ACTIVE(bool* newINISIALISED_Flag)
+void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::app_initialise_flag_core_ACTIVE(bool* newINISIALISED_Flag)
 {
     stat_REG_set_flag_thread_2STATE_ACTIVE(*newINISIALISED_Flag);
 }
-void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::dyn_initialise_number_Implemented_Threads(uint8_t* newINISIALISED_Value)
+void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::app_initialise_number_Implemented_Threads(uint8_t* newINISIALISED_Value)
 {
     stat_REG_set_number_Implemented_Threads(*newINISIALISED_Value);
 }

@@ -6,10 +6,10 @@ namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND
     public:
         LaunchEnableForConcurrentThreadsAt_END_Control();
         virtual ~LaunchEnableForConcurrentThreadsAt_END_Control();
-        void launchEnable_Activate(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj);
-        void launchEnable_Request(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t concurrentThreadID);
-        void launchEnable_SortQue(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t number_Implemented_Threads);
-        void launchQue_Update(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t number_Implemented_Threads);
+        void app_launchEnable_Activate(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj);
+        void app_launchEnable_Request(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t concurrentThreadID);
+        void app_launchEnable_SortQue(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t number_Implemented_Threads);
+        void app_launchQue_Update(class LaunchEnableForConcurrentThreadsAt_END_Framework* obj, uint8_t number_Implemented_Threads);
         void dyn_REG_initialise_concurrentCycle_Try_CoreId_Index(uint8_t* newINITIALISED_Value);
         void dyn_REG_initialise_flag_praisinglaunch(bool* newINITIALISED_Flagbit);
         void dyn_REG_initialise_Item_On_list_Of_launchActive_Count_For_ThreadID(uint8_t concurrenctThreadID, uint32_t* newINITIALISED_Value);

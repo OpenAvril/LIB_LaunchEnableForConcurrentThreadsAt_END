@@ -3,19 +3,19 @@ OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThr
 OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework::LaunchEnableForConcurrentThreadsAt_END_Framework()
 {
 	stat_CLASS_create_ptr_LaunchConcurrency();
-	stat_CLASS_get_ptr_LaunchConcurrency()->dyn_initialise_Control();
+	stat_CLASS_get_ptr_LaunchConcurrency()->app_initialise_Control();
 }
 OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework::~LaunchEnableForConcurrentThreadsAt_END_Framework()
 {
 	delete _stat_CLASS_ptr_LaunchConcurrency;
 }
-void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework::dyn_initialise(OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework* obj)
+void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework::app_initialise(OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework* obj)
 {
 	uint8_t* newINISIALISED_Value = new uint8_t(4);
-	obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_Global()->dyn_initialise_number_Implemented_Threads(newINISIALISED_Value);//NUMBER OF THREADS
+	obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_Global()->app_initialise_number_Implemented_Threads(newINISIALISED_Value);//NUMBER OF THREADS
 	delete newINISIALISED_Value;
 	bool* newINISIALISED_Flag = new bool(true);
-	obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_Global()->dyn_initialise_flag_core_ACTIVE(newINISIALISED_Flag);
+	obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_Global()->app_initialise_flag_core_ACTIVE(newINISIALISED_Flag);
 	delete newINISIALISED_Flag;
 	bool* newINITIALISED_Flagbit1 = new bool(false);
 	obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_LaunchConcurrency_Control()->dyn_REG_initialise_flag_praisinglaunch(newINITIALISED_Flagbit1);
