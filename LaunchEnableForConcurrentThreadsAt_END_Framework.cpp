@@ -3,6 +3,7 @@ OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThr
 OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework::LaunchEnableForConcurrentThreadsAt_END_Framework()
 {
 	stat_CLASS_create_ptr_LaunchConcurrency();
+	stat_CLASS_get_ptr_LaunchConcurrency()->dyn_initialise_Control();
 }
 OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework::~LaunchEnableForConcurrentThreadsAt_END_Framework()
 {
@@ -16,7 +17,6 @@ void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurre
 	bool* newINISIALISED_Flag = new bool(true);
 	obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_Global()->dyn_initialise_flag_core_ACTIVE(newINISIALISED_Flag);
 	delete newINISIALISED_Flag;
-	obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_initialise_Control(obj);
 	bool* newINITIALISED_Flagbit1 = new bool(false);
 	obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_LaunchConcurrency_Control()->dyn_REG_initialise_flag_praisinglaunch(newINITIALISED_Flagbit1);
 	delete newINITIALISED_Flagbit1;
@@ -45,7 +45,7 @@ OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThr
 	return _stat_CLASS_ptr_LaunchConcurrency;
 }
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework::stat_CLASS_create_ptr_LaunchConcurrency()
-	{
-		_stat_CLASS_ptr_LaunchConcurrency = new class OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END();
-		while (stat_CLASS_get_ptr_LaunchConcurrency() == NULL) { /* wait untill stat_created */ }
-	}
+{
+	_stat_CLASS_ptr_LaunchConcurrency = new class OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END();
+	while (stat_CLASS_get_ptr_LaunchConcurrency() == NULL) { /* wait untill stat_created */ }
+}

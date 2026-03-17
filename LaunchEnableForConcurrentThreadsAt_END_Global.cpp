@@ -23,7 +23,6 @@ void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurre
 {
     stat_REG_set_number_Implemented_Threads(*newINISIALISED_Value);
 }
-
 bool OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::dyn_REG_get_ptr_flag_thread_2STATE_ACTIVE()
 {
     return *stat_REG_get_ptr_flag_thread_2STATE();
@@ -65,6 +64,6 @@ void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurre
     *_stat_REG_ptr_flag_thread_2STATE = flag_coreSTATE_Id;
 }
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_REG_set_number_Implemented_Threads(uint8_t number_Implemented_Threads)
-    {
-        *_stat_REG_ptr_number_Implemented_Threads = number_Implemented_Threads;
-    }
+{
+	*_stat_REG_ptr_number_Implemented_Threads = number_Implemented_Threads;
+}
