@@ -22,8 +22,9 @@ extern "C"
 			static void set_Flag_ConcurrentCoreState(void* obj, unsigned char* bytes, bool newValue);
 
 		private:
-			static void stat_CLASS_create_ptr_Framework();
-			static class LaunchEnableForConcurrentThreadsAt_END_Framework* stat_CLASS_get_ptr_Framework();
+			static void stat_boot1_CLASS_DEFINE_LaunchEnableForConcurrentThreadsAt_END_Framework();
+			static void stat_boot3_CLASS_INITIALISE_LaunchEnableForConcurrentThreadsAt_END_Framework();
+			static class LaunchEnableForConcurrentThreadsAt_END_Framework* stat_CLASS_get_ptr_LaunchEnableForConcurrentThreadsAt_END_Framework();
 		};
 	}
 }
