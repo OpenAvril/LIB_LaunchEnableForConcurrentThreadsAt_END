@@ -4,7 +4,7 @@ uint8_t* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConc
 OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::LaunchEnableForConcurrentThreadsAt_END_Global()
 {
     boot0_CLASS_DECLAIRE_WriteEnableForThreadsAt_STACK_Global();
-    boot0_CLASS_DECLAIRE_WriteEnableForThreadsAt_STACK_Global();
+    boot1_CLASS_DEFINE_WriteEnableForThreadsAt_STACK_Global();
     boot3_CLASS_INITIALISE_WriteEnableForThreadsAt_STACK_Global();
     boot0_REG_DECLAIRE_WriteEnableForThreadsAt_STACK_Global();
 }
@@ -100,19 +100,23 @@ void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurre
 }
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_REG_boot2_SUBSTANTIATE_flag_thread_2STATE()
 {
-    _stat_REG_ptr_flag_thread_2STATE[0] = { bool(true) };
-    _stat_REG_ptr_flag_thread_2STATE[1] = { bool(true) };
-    _stat_REG_ptr_flag_thread_2STATE[2] = { bool(true) };
+    std::cout << "entered stat_REG_boot2_SUBSTANTIATE_flag_thread_2STATE()" << std::endl;
+    _stat_REG_ptr_flag_thread_2STATE = new std::array<bool, 3>();
+    while (stat_REG_get_ptr_flag_thread_2STATE() == NULL) {}
+    *_stat_REG_ptr_flag_thread_2STATE = { true, true, true };
+    std::cout << "exiting stat_REG_boot2_SUBSTANTIATE_flag_thread_2STATE()" << std::endl;
 }
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_REG_boot2_SUBSTANTIATE_number_Implemented_Threads()
 {
+    std::cout << "entered stat_REG_boot2_SUBSTANTIATE_number_Implemented_Threads()" << std::endl;
     _stat_REG_ptr_number_Implemented_Threads = new uint8_t(UINT8_MAX);
+    std::cout << "exiting stat_REG_boot2_SUBSTANTIATE_number_Implemented_Threads()" << std::endl;
 }
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_REG_boot3_INITIALISE_flag_thread_2STATE()
 {
-    _stat_REG_ptr_flag_thread_2STATE[0] = { bool(false) };
-    _stat_REG_ptr_flag_thread_2STATE[1] = { bool(false) };
-    _stat_REG_ptr_flag_thread_2STATE[2] = { bool(false) };
+    std::cout << "entered stat_REG_boot3_INITIALISE_flag_thread_2STATE()" << std::endl;
+    *_stat_REG_ptr_flag_thread_2STATE = { false, false, false };
+    std::cout << "exiting stat_REG_boot3_INITIALISE_flag_thread_2STATE()" << std::endl;
 }
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Global::stat_REG_boot3_INITIALISE_number_Implemented_Threads()
 {

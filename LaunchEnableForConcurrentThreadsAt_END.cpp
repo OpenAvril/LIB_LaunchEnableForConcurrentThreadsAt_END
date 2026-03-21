@@ -49,16 +49,16 @@ void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurre
 }
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END::boot0_CLASS_DECLAIRE_LaunchEnableForConcurrentThreadsAt_END()
 {
-	std::cout << "entered boot0_CLASS_DECLAIRE_LaunchEnableForConcurrentThreadsAt_END_Framework()." << std::endl;
+	std::cout << "entered boot0_CLASS_DECLAIRE_LaunchEnableForConcurrentThreadsAt_END()." << std::endl;
 
-	std::cout << "exiting boot0_CLASS_DECLAIRE_LaunchEnableForConcurrentThreadsAt_END_Framework()." << std::endl;
+	std::cout << "exiting boot0_CLASS_DECLAIRE_LaunchEnableForConcurrentThreadsAt_END()." << std::endl;
 }
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END::boot1_CLASS_DEFINE_LaunchEnableForConcurrentThreadsAt_END()
 {
-	std::cout << "entered boot1_CLASS_DEFINE_LaunchEnableForConcurrentThreadsAt_END_Framework()." << std::endl;
+	std::cout << "entered boot1_CLASS_DEFINE_LaunchEnableForConcurrentThreadsAt_END()." << std::endl;
     stat_CLASS_boot1_DEFINE_Global();
     stat_CLASS_boot1_DEFINE_WriteEnable_Control();
-	std::cout << "exiting boot1_CLASS_DEFINE_LaunchEnableForConcurrentThreadsAt_END_Framework()." << std::endl;
+	std::cout << "exiting boot1_CLASS_DEFINE_LaunchEnableForConcurrentThreadsAt_END()." << std::endl;
 }
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END::boot3_CLASS_INITIALISE_LaunchEnableForConcurrentThreadsAt_END()
 {

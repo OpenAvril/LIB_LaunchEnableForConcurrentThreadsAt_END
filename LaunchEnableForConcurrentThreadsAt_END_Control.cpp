@@ -299,37 +299,42 @@ void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurre
 }
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::stat_REG_boot2_SUBSTANTIATE_ptr_concurrentCycle_Try_CoreId_Index()
 {
-    _stat_REG_ptr_flag_praisinglaunch = new bool(true);
+    _stat_REG_ptr_concurrentCycle_Try_CoreId_Index = new uint8_t();
+    *_stat_REG_ptr_concurrentCycle_Try_CoreId_Index = uint8_t(1);
 }
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::stat_REG_boot2_SUBSTANTIATE_ptr_flag_praisinglaunch()
 {
-    _stat_REG_ptr_list_Of_launchActive_Count_For_ThreadID = new std::list<uint32_t>(UINT32_MAX);
-    while (stat_REG_get_ptr_flag_praisinglaunch() == NULL) {}
+    _stat_REG_ptr_flag_praisinglaunch = new bool();
+    *_stat_REG_ptr_flag_praisinglaunch = true;
 }
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::stat_REG_boot2_SUBSTANTIATE_ptr_list_Of_launchActive_Count_For_ThreadID()
 {
-    _stat_REG_ptr_list_Of_launchIdle_Count_For_ThreadID = new std::list<uint32_t>(UINT32_MAX);
-    while (stat_REG_get_ptr_list_Of_launchActive_Count_For_ThreadID() == NULL) {}
+    _stat_REG_ptr_list_Of_launchActive_Count_For_ThreadID = new std::list<uint32_t>();
+    while (stat_REG_get_ptr_flag_praisinglaunch() == NULL) {}
+    *_stat_REG_ptr_list_Of_launchActive_Count_For_ThreadID = { uint32_t(UINT32_MAX), uint32_t(UINT32_MAX), uint32_t(UINT32_MAX) };
 }
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::stat_REG_boot2_SUBSTANTIATE_ptr_list_Of_launchIdle_Count_For_ThreadID()
 {
-    _stat_REG_ptr_list_Of_STATE_For_ConcurrentCore = new std::list<bool>();
-    while (stat_REG_get_ptr_list_Of_launchIdle_Count_For_ThreadID() == NULL) {}
+    _stat_REG_ptr_list_Of_launchIdle_Count_For_ThreadID = new std::list<uint32_t>();
+    while (stat_REG_get_ptr_list_Of_launchActive_Count_For_ThreadID() == NULL) {}
+    *_stat_REG_ptr_list_Of_launchIdle_Count_For_ThreadID = { uint32_t(UINT32_MAX), uint32_t(UINT32_MAX), uint32_t(UINT32_MAX) };
 }
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::stat_REG_boot2_SUBSTANTIATE_ptr_list_Of_STATE_For_ConcurrentCore()
 {
-    _stat_REG_ptr_list_for_Que_Of_CoreTolaunch = new std::list<uint8_t>(UINT8_MAX);
-    while (stat_REG_get_ptr_list_Of_STATE_For_ConcurrentCore() == NULL) {}
+    _stat_REG_ptr_list_Of_STATE_For_ConcurrentCore = new std::list<bool>();
+    while (stat_REG_get_ptr_list_Of_launchIdle_Count_For_ThreadID() == NULL) {}
+    *_stat_REG_ptr_list_Of_STATE_For_ConcurrentCore = { true, true, true };
 }
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::stat_REG_boot2_SUBSTANTIATE_ptr_list_for_Que_Of_CoreTolaunch()
 {
-    _stat_REG_ptr_new_concurrentCycle_Try_CoreId_Index = new uint8_t(UINT8_MAX);
-    while (stat_REG_get_ptr_list_Of_launchActive_Count_For_ThreadID() == NULL) {}
+    _stat_REG_ptr_list_for_Que_Of_CoreTolaunch = new std::list<uint8_t>();
+    while (stat_REG_get_ptr_list_Of_STATE_For_ConcurrentCore() == NULL) {}
+    *_stat_REG_ptr_list_for_Que_Of_CoreTolaunch = { uint8_t(UINT8_MAX), uint8_t(UINT8_MAX), uint8_t(UINT8_MAX) };
 }
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::stat_REG_boot2_SUBSTANTIATE_ptr_new_concurrentCycle_Try_CoreId_Index()
 {
-    _stat_REG_ptr_new_concurrentCycle_Try_CoreId_Index = new uint8_t(UINT8_MAX);
-    while (stat_REG_get_ptr_new_concurrentCycle_Try_CoreId_Index() == NULL) {}
+    _stat_REG_ptr_new_concurrentCycle_Try_CoreId_Index = new uint8_t();
+    *_stat_REG_ptr_new_concurrentCycle_Try_CoreId_Index = uint8_t(1);
 }
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Control::stat_REG_boot3_INITIALISE_ptr_concurrentCycle_Try_CoreId_Index()
 {

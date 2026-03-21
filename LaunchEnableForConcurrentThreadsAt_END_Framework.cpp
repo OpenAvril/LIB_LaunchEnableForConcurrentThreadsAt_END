@@ -38,9 +38,9 @@ void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurre
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework::boot1_REG_DEFINE_LaunchEnableForConcurrentThreadsAt_END_Framework(OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework* obj)
 {
 	std::cout << "entered boot1_REG_DEFINE_LaunchEnableForConcurrentThreadsAt_END_Framework()." << std::endl;
-	obj->dyn_CLASS_get_ptr_LaunchConcurrency()->boot1_CLASS_DEFINE_LaunchEnableForConcurrentThreadsAt_END();
+	obj->dyn_CLASS_get_ptr_LaunchConcurrency()->boot1_REG_DEFINE_LaunchEnableForConcurrentThreadsAt_END();
 	obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_Global()->boot1_REG_DEFINE_WriteEnableForThreadsAt_STACK_Global();
-	obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_LaunchConcurrency_Control()->boot1_CLASS_DEFINE_WriteEnableForThreadsAt_STACK_Control();
+	obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_LaunchConcurrency_Control()->boot1_REG_DEFINE_WriteEnableForThreadsAt_STACK_Control();
 	std::cout << "exiting boot1_REG_DEFINE_LaunchEnableForConcurrentThreadsAt_END_Framework()." << std::endl;
 }
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework::boot2_REG_SUBSTANTIATE_LaunchEnableForConcurrentThreadsAt_END_Framework(OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework* obj)
@@ -54,9 +54,9 @@ void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurre
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework::boot3_REG_INITIALISE_LaunchEnableForConcurrentThreadsAt_END_Framework(OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework* obj)
 {
 	std::cout << "entered boot3_REG_INITIALISE_LaunchEnableForConcurrentThreadsAt_END_Framework()." << std::endl;
-	obj->dyn_CLASS_get_ptr_LaunchConcurrency()->boot3_CLASS_INITIALISE_LaunchEnableForConcurrentThreadsAt_END();
-	obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_Global()->boot3_CLASS_INITIALISE_WriteEnableForThreadsAt_STACK_Global();
-	obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_LaunchConcurrency_Control()->boot3_CLASS_INITIALISE_WriteEnableForThreadsAt_STACK_Control();
+	obj->dyn_CLASS_get_ptr_LaunchConcurrency()->boot3_REG_INITIALISE_LaunchEnableForConcurrentThreadsAt_END();
+	obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_Global()->boot3_REG_INITIALISE_WriteEnableForThreadsAt_STACK_Global();
+	obj->dyn_CLASS_get_ptr_LaunchConcurrency()->dyn_CLASS_get_ptr_LaunchConcurrency_Control()->boot3_REG_INITIALISE_WriteEnableForThreadsAt_STACK_Control();
 	std::cout << "exiting boot3_REG_INITIALISE_LaunchEnableForConcurrentThreadsAt_END_Framework()." << std::endl;
 }
 void OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework::boot4_PGM_INSTANTIATE_LaunchEnableForConcurrentThreadsAt_END_Framework(OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::LaunchEnableForConcurrentThreadsAt_END_Framework* obj)
