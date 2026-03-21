@@ -11,19 +11,19 @@ void* OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtEND::CLIBLaunchEnableForCon
 
     std::cout << "started Registers - DEFINE" << std::endl;
     stat_CLASS_get_ptr_LaunchEnableForConcurrentThreadsAt_END_Framework()->boot1_REG_DEFINE_LaunchEnableForConcurrentThreadsAt_END_Framework(stat_CLASS_get_ptr_LaunchEnableForConcurrentThreadsAt_END_Framework());
-    std::cout << "started Registers - DEFINE." << std::endl;
+    std::cout << "done Registers - DEFINE." << std::endl;
 
     std::cout << "started Registers - SUBSTANTIATE." << std::endl;
     stat_CLASS_get_ptr_LaunchEnableForConcurrentThreadsAt_END_Framework()->boot2_REG_SUBSTANTIATE_LaunchEnableForConcurrentThreadsAt_END_Framework(stat_CLASS_get_ptr_LaunchEnableForConcurrentThreadsAt_END_Framework());
-    std::cout << "started Registers - SUBSTANTIATE." << std::endl;
+    std::cout << "done Registers - SUBSTANTIATE." << std::endl;
 
     std::cout << "started Registers - INITIALISE." << std::endl;
     stat_CLASS_get_ptr_LaunchEnableForConcurrentThreadsAt_END_Framework()->boot3_REG_INITIALISE_LaunchEnableForConcurrentThreadsAt_END_Framework(stat_CLASS_get_ptr_LaunchEnableForConcurrentThreadsAt_END_Framework());
-    std::cout << "started Registers - INITIALISE." << std::endl;
+    std::cout << "done Registers - INITIALISE." << std::endl;
 
     std::cout << "started Program - INSTANTIATE." << std::endl;
     stat_CLASS_get_ptr_LaunchEnableForConcurrentThreadsAt_END_Framework()->boot4_PGM_INSTANTIATE_LaunchEnableForConcurrentThreadsAt_END_Framework(stat_CLASS_get_ptr_LaunchEnableForConcurrentThreadsAt_END_Framework());
-    std::cout << "started Program - INSTANTIATE." << std::endl;
+    std::cout << "done Program - INSTANTIATE." << std::endl;
 
     std::cout << "" << std::endl;
     std::cout << "        ,     \\      /      ," << std::endl;
